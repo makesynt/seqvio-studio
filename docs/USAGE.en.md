@@ -2,21 +2,21 @@
 
 [Home](../README.en.md) · [简体中文](USAGE.zh-CN.md)
 
-This guide covers the **0.1.0 unsigned Windows x64 preview**. Chinese UI labels are included where useful. No validated macOS installer is currently published.
+This guide describes the Windows application workflow, with Chinese UI labels where useful. Consult the selected application release for its version, platforms, signing status, and validation scope.
 
 ## Installation and first launch
 
-Download the setup EXE and SHA256SUMS.txt from **Assets** in the [v0.1.0 release](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0). In the download directory, run:
+Choose a Seqvio Studio application release in [Releases](https://github.com/makesynt/seqvio-studio/releases), then download the appropriate setup EXE and SHA256SUMS.txt from that same release's **Assets**. Do not select a sample, style-pack, or media-source release. In the download directory, run:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-0.1.0-win-x64-Setup.exe
+Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-Compare the result with the checksum file from the same release. The installer is approximately 188.8 MB; unpacked application files total about 562.4 MB. Leave additional space for projects, audio, video, and download caches. Installer size alone is not the disk-space requirement.
+Match each filename/hash to the checksum file from the same release. Consult the release notes for sizes and disk requirements, and leave additional space for projects, audio, video, and caches.
 
 Run the setup program, choose a directory, and launch the app from the desktop or Start menu. The installer includes the application runtime and media tools. Seqvio itself does not require a separate Node.js, npm, Python, or FFmpeg installation; your chosen agent CLI may have its own installation requirements.
 
-This build is unsigned. Windows may show an unknown-publisher or “Windows protected your PC” warning. After verifying the source, whether you can proceed depends on the options and security policies on your device. Smart App Control or enterprise policies may block execution. Record the exact warning instead of treating a failure to launch as a rendering issue. See [Microsoft's SmartScreen documentation](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
+If the selected build is unsigned, Windows may show an unknown-publisher or “Windows protected your PC” warning. After verifying the source, whether you can proceed depends on the options and security policies on your device. Smart App Control or enterprise policies may block execution. Record the exact warning instead of treating a failure to launch as a rendering issue. See [Microsoft's SmartScreen documentation](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation).
 
 ## Configure a creation engine
 
@@ -38,7 +38,7 @@ For a nonstandard CLI location, set `OPENCODE_CMD`, `CODEX_CMD`, or `ANTIGRAVITY
 
 ### Style library
 
-The [style-pack catalog](STYLE-PACKS.md) offers 41 importable ZIPs and an all-packs collection. The app already bundles these styles. For personal copies, download an individual ZIP and use Custom → Import style package (自定义 → 导入风格包). Extract the collection before importing its ZIPs one at a time.
+The [style-pack download and customization guide](STYLE-PACKS.md) provides existing packages to modify and a format reference for creating your own. Use your own ID/name, or increase the version when retaining an existing ID, then use Custom → Import style package (自定义 → 导入风格包). Extract collections before importing individual packs.
 
 Browse the 41 built-in styles. Covers and silent short loops are bundled. Opening a full sample downloads only that video, verifies it, and caches it. Silent hover loops are intentional, not a voiceover failure.
 
@@ -129,6 +129,6 @@ After cancellation or interruption, reopen the local project and resume from the
 
 Projects and outputs live on your computer. Back up the project directory and related assets. An exported plan or subtitle file does not replace a full project backup. Avoid deleting internal scene/cache files to resolve an unidentified error.
 
-Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for bundled notices. FFmpeg/ffprobe corresponding source and build records are in the [source v2 release](https://github.com/makesynt/seqvio-studio/releases/tag/ffmpeg-seqvio-source-v2).
+Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for bundled notices. Use the application release notes and in-app links for the matching FFmpeg/ffprobe source and build records; resources can also be found in [Releases](https://github.com/makesynt/seqvio-studio/releases).
 
 For [Issues](https://github.com/makesynt/seqvio-studio/issues), include the app version, Windows version, engine/model, failing stage, exact error, and minimal reproduction steps. Remove API keys, tokens, and private material from screenshots, logs, or project excerpts before posting.

@@ -1,4 +1,4 @@
-# 风格包下载 / Style packs
+# 风格包下载与自定义 / Style pack downloads and customization
 
 [中文首页](../README.md) · [English home](../README.en.md) · [Release](https://github.com/makesynt/seqvio-studio/releases/tag/style-packs-v1)
 
@@ -27,6 +27,51 @@ These are importable personal copies of the 41 styles bundled with Seqvio Studio
 5. Identical imports reuse an existing version. Different content with the same ID/version is rejected. Back up modified personal styles, then increase the version or choose another ID outside the app rather than replacing your work.
 
 Each pack preserves SKILL.md, configuration, rules, abstract examples, declared references/images/fonts, and existing notices. Reference source is documentation, not an executable plugin. Some references contain only thumbnails or dependency notes, not complete sample-production projects. Packs do not install models, speech services, or a renderer, and do not guarantee an exact showcase reproduction. Follow the original asset/license notices.
+
+## 在现有包基础上自定义
+
+1. 下载并解压一个风格 ZIP；也可先解压全量合集，再解压其中选中的单包。
+2. 修改 `SKILL.md` 中的制作方法、`rules.json` 的规则和可选的 `examples.json`；在 `style.json` 中调整现有能力支持的配色、排版、布局与动效。需要图片或字体时，将文件放入 `assets/` 并声明。
+3. 设置自己的 `id` 和 `name`，同步更新 `profile.id` 与 `profile.label`，以及 SKILL frontmatter 的 name/description。不要使用保留的 `builtin-` 前缀。
+4. 保留已有 ID 时，每次修改包内容都增加整数 `version`。相同 ID/版本只有内容完全一致才会复用，否则应用拒绝导入。
+5. 将单个风格目录的内容压缩为 ZIP（根目录直接含 style.json，或只有一个外层包目录），通过“自定义 → 导入风格包”导入并用短项目验证。保留资源的原有许可与版权说明。
+
+## 参考格式制作自己的风格包
+
+可以从空目录自建，也可下载本页“技术图解”作为完整、可导入的字段参考；无需先创建视频。目录结构如下：
+
+```text
+my-style/
+  SKILL.md
+  style.json
+  rules.json
+  examples.json              # 可选 / optional
+  references/design.md       # 可选，声明后随包提供
+  assets/image.webp          # 可选，声明后随包提供
+  assets/font.woff2          # 可选，声明后随包提供
+  LICENSE.txt                # 按所含内容需要保留 / as applicable
+```
+
+| 文件 / File | 格式要点 / Format requirements |
+| --- | --- |
+| SKILL.md | YAML frontmatter 含合法的小写连字符 name 和非空 description；正文写通用制作方法。 / Valid lowercase hyphenated name and nonempty description in YAML frontmatter; reusable authoring guidance in the body. |
+| style.json | `format: seqvio-style-skill`、`schemaVersion: 1`，合法 id、正整数 version、name，以及完整的 profile、visual 等配置。rulesFile 必须指向实际规则文件。 / Declare the format/schema, ID, positive integer version, name, complete profile/visual configuration, and a rulesFile pointing to the actual rules file. |
+| rules.json | 规则数组，每项含 id、scope、text；scope 使用 all、whiteboard、diagram、code 或 three。 / Array of rules with id, scope, and text; use a supported scope. |
+| examples.json | 可选的抽象范例数组；使用 kind、description，不放整片旁白或项目私人资料。通过 examplesFile 声明。 / Optional abstract examples using kind/description, declared with examplesFile. |
+| references/ | 参考文档以 Markdown 提供，并在 references 中声明；较长参考可使用 load: on-demand。 / Declare Markdown references; use load: on-demand for longer reference material. |
+| assets/ | 图片/字体需在 assets 中声明唯一 id、kind、相对 path；字体还须声明 family。 / Declare each image/font with a unique id, kind, and relative path; fonts also require family. |
+
+导入包最多 24 MiB、160 个文件；路径必须相对包目录，不接受目录穿越、符号链接或可执行脚本。修改应使用当前应用支持的风格与渲染字段；包不是安装新插件的方式。修改与导入的更完整操作见[中文使用指南](USAGE.zh-CN.md)。
+
+## Customize an existing pack
+
+Extract one style ZIP. Edit the authoring guidance in SKILL.md, rules, optional abstract examples, and supported palette/typography/layout/motion settings in style.json. Add declared assets and retain their notices. Choose your own ID/name, update profile.id/profile.label and SKILL frontmatter, or increase the integer version if retaining an existing ID. Never use the reserved builtin- prefix. ZIP only that package and import it through Custom → Import style package, then check it with a short project. Identical reimports reuse a version; conflicting content with the same ID/version is rejected.
+
+## Create your own package from the format
+
+Start with an empty directory using the structure/table above, or use the Technical diagram pack as a complete importable example of the configuration fields. Include SKILL.md, style.json, and the declared rules file; add examples, references, and assets only as needed and declare them correctly. A partial style.json with missing profile/visual fields is not a working package. No completed video is required to create a package outside the app.
+
+Limits are 24 MiB and 160 files per pack. Paths must be relative; traversal, symbolic links, and executable scripts are rejected. Use fields/capabilities supported by the app: style packs do not install renderer plugins. See the [English user guide](USAGE.en.md) for the workflow.
 
 ## 单包下载 / Individual downloads
 

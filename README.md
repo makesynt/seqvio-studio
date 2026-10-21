@@ -6,7 +6,7 @@
 
 简体中文 · [English](README.en.md)
 
-[下载安装](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) · [完整使用指南](docs/USAGE.zh-CN.md) · [风格包下载](docs/STYLE-PACKS.md) · [风格样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
+[下载安装](https://github.com/makesynt/seqvio-studio/releases) · [完整使用指南](docs/USAGE.zh-CN.md) · [风格包下载](docs/STYLE-PACKS.md) · [风格样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
 
 Seqvio Studio 是一款本地桌面视频创作工作台。输入主题、资料或完整稿件，连接你自己的 OpenCode、Codex 或 Antigravity，逐步完成内容规划、分镜与旁白、画面编写、关键帧审阅、配音和视频导出。
 
@@ -26,35 +26,27 @@ Agent 按所选风格编写画面和动画，Seqvio 引擎负责场景编译、�
 
 ## 下载与安装
 
-当前公开版本为 **0.1.0 Windows x64 未签名测试版**。macOS 安装包尚未发布；Windows 的验证结果不代表 macOS 已验证。
+安装包统一在 [GitHub Releases](https://github.com/makesynt/seqvio-studio/releases) 发布。请在列表中选择 **Seqvio Studio 应用版本**，不要将样片、风格包或 FFmpeg 源码发布当作安装包。测试版本会标记为 **Pre-release**。
 
-1. 打开 [v0.1.0 Releases](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0)。
-2. 在 **Assets** 下载 [`Seqvio-Studio-0.1.0-win-x64-Setup.exe`](https://github.com/makesynt/seqvio-studio/releases/download/v0.1.0/Seqvio-Studio-0.1.0-win-x64-Setup.exe)，约 **188.8 MB**。
-3. 同时下载 [`SHA256SUMS.txt`](https://github.com/makesynt/seqvio-studio/releases/download/v0.1.0/SHA256SUMS.txt)，核对文件后运行安装程序，选择安装目录。
-4. 从桌面或开始菜单启动 **Seqvio Studio**，按下方步骤配置创作引擎。
-
-PowerShell 校验命令：
+1. 打开所选应用版本的发布页，阅读系统、CPU 架构、签名状态及已知问题。
+2. 在 **Assets** 中下载与设备匹配的安装包，以及同一发布页的 **SHA256SUMS.txt**。具体文件名、版本、大小和校验值以该发布页为准。
+3. 以下为 Windows 校验示例：在下载目录执行命令，将结果按文件名与校验清单核对，再运行安装程序。
+4. 完成安装后启动 **Seqvio Studio**，按下方步骤配置创作引擎。其他平台的安装方式以对应发行说明为准。
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-0.1.0-win-x64-Setup.exe
+Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-此版本安装包的 SHA-256：
+未签名版本可能显示未知发布者或 SmartScreen 提示，部分设备策略会阻止运行。确认下载来源和校验结果后，使用系统允许的方式继续。详见[安装与常见问题](docs/USAGE.zh-CN.md#安装与首次启动)。
 
-```text
-9f4b58131b5f5f1f597f531e7f3357a0eb2df0134fa8d5caa00cd95181809d2d
-```
-
-测试版没有代码签名，Windows 可能显示未知发布者或 SmartScreen 提示，部分设备的安全策略会阻止运行。只在确认来源和校验值后，使用系统允许的方式继续安装。详见[安装与常见问题](docs/USAGE.zh-CN.md#安装与首次启动)。
-
-GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照，不是安装包。本仓库提供产品文档、安装版本、样片和第三方构建资料；不包含完整桌面应用的开发工程，不能通过克隆本仓库再执行 `npm install` 来启动应用。
+GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照，不是安装包。本仓库提供产品文档、安装版本、样片和第三方构建资料；不包含完整桌面应用开发工程，不能通过克隆本仓库再执行 `npm install` 启动应用。
 
 ## 安装包包含什么
 
 | 项目 | 提供方式 |
 | --- | --- |
 | 桌面应用、Electron 与默认 Chromium 渲染后端 | 随安装包提供 |
-| FFmpeg 8.1.3 source v2 与 ffprobe | 随 Windows 安装包提供，可离线使用 |
+| FFmpeg 与 ffprobe | 随 Windows 安装包提供，可离线使用 |
 | 41 套风格、封面与静音短循环预览 | 随安装包提供 |
 | 界面字体 Inter、Noto Sans SC；默认白板字体 Virgil、Long Cang | 随安装包提供，可离线使用 |
 | 完整风格样片 | 首次预览时从本仓库 GitHub Releases 下载，校验并缓存 |
@@ -65,9 +57,11 @@ GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照�
 
 随包媒体工具包含 x265、Windows GPU 编解码及多种音频库。**当前导出界面仍以 H.264/AAC MP4 为默认输出**，包含 x265 不代表增加了 H.265 导出选项。GPU 是否启用取决于设备、驱动及实际速度，首次探测有额外开销。
 
-### 下载与导入风格包
+### 风格包下载与自定义
 
-[41 套风格包目录与说明](docs/STYLE-PACKS.md)提供单包及[全量合集下载](https://github.com/makesynt/seqvio-studio/releases/download/style-packs-v1/seqvio-style-packs-v1-all.zip)（约 13.9 MB）。合集先解压，再逐个导入其中的风格 ZIP；单包可在“自定义 → 导入风格包”直接选择。安装版已内置这些风格，通常无需重复导入。下载包使用 `custom-` ID 的个人副本，不覆盖内置风格；更多版本与冲突处理见目录说明。
+从[风格包目录与格式说明](docs/STYLE-PACKS.md)下载现有风格包，即可解压修改规则、配色、排版、动效及声明的资源，再导入为自己的风格；也可参考包格式，从头制作个人风格包。安装版已内置原风格，无需为正常使用而重复导入。
+
+自定义后使用自己的 ID 与名称；保留原 ID 时，每次修改内容都应增加版本号。将单个包压缩为 ZIP，在“自定义 → 导入风格包”导入。全量合集先解压，再逐个导入其中的风格 ZIP。目录说明包含必需文件、配置字段、资源声明和版本冲突处理。
 
 ## 第一次制作视频
 
@@ -89,6 +83,27 @@ GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照�
 
 ## 许可、源码与反馈
 
-安装后的 **设置 → 关于与诊断 → 第三方许可与源码** 提供本地许可及源码入口。FFmpeg/ffprobe 以独立工具随包分发，许可为 GPL-3.0-or-later；完整对应源码、依赖、构建脚本和记录见 [FFmpeg source v2 Release](https://github.com/makesynt/seqvio-studio/releases/tag/ffmpeg-seqvio-source-v2)。其他第三方组件遵循各自许可证。
+安装后的 **设置 → 关于与诊断 → 第三方许可与源码** 提供本地许可及源码入口。FFmpeg/ffprobe 以独立工具随包分发，许可为 GPL-3.0-or-later；对应源码、依赖和构建记录的入口以所选版本的发布说明及应用内链接为准，也可浏览[本仓库 Releases](https://github.com/makesynt/seqvio-studio/releases)。其他第三方组件遵循各自许可证。
 
-反馈问题请使用 [Issues](https://github.com/makesynt/seqvio-studio/issues)，附应用版本、操作系统、所选引擎和复现步骤；提交前移除密钥和私人资料。当前安装版已验证安装/卸载、本地配音、双后端渲染和导出；NVIDIA、AMD 与 macOS 尚未完成实机验证。测试版仍在持续完善。
+反馈问题请使用 [Issues](https://github.com/makesynt/seqvio-studio/issues)，附应用版本、操作系统、所选引擎和复现步骤；提交前移除密钥和私人资料。各发行版本的验证范围、已知问题和平台支持以其发布说明为准。
+
+## 参考项目与致谢
+
+感谢以下开源项目及其贡献者。它们为 Seqvio Studio 提供了引擎、风格参考、运行时及基础能力：
+
+| 项目 | 在本项目中的作用 |
+| --- | --- |
+| [Seqvio](https://github.com/makesynt/seqvio) | 场景协议、旁白时间映射、质检与渲染引擎。 |
+| [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) | 艺术风格配方、动画语法及视觉表达参考；感谢 alchaincyf / 花叔·花生。 |
+| [Electron](https://github.com/electron/electron) / [Chromium](https://www.chromium.org/) | 桌面运行时及默认浏览器渲染基础。 |
+| [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | 界面、代码场景和本地三维画面。 |
+| [Rough.js](https://github.com/rough-stuff/rough) | 手绘线条与白板绘图。 |
+| [Excalidraw](https://github.com/excalidraw/excalidraw) | 白板视觉与 Virgil 字体来源；并非嵌入完整 Excalidraw 编辑器。 |
+| [FFmpeg](https://ffmpeg.org/) | 媒体探测、音视频编解码、混音和合成。 |
+| [Puppeteer](https://github.com/puppeteer/puppeteer) / [esbuild](https://github.com/evanw/esbuild) | 浏览器自动化及场景编译打包。 |
+| [Shiki](https://github.com/shikijs/shiki) / [Dagre](https://github.com/dagrejs/dagre) | 代码高亮与图表布局。 |
+| [Acorn](https://github.com/acornjs/acorn) / [Ajv](https://github.com/ajv-validator/ajv) / [yauzl](https://github.com/thejoshwolfe/yauzl) | 语法解析、数据校验与 ZIP 读取。 |
+| [OpenCode](https://github.com/anomalyco/opencode) / [Codex CLI](https://github.com/openai/codex) | 可选的本机创作 Agent 接入；需自行安装和配置。 |
+| [Inter](https://github.com/rsms/inter) / [Noto fonts](https://github.com/notofonts) | 界面与多语言排版字体。 |
+
+以上为主要项目致谢，不是完整依赖或许可清单；风格素材、字体和其他第三方内容遵循各自许可证，具体版权与许可见相应发行版随附说明。

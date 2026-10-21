@@ -2,21 +2,21 @@
 
 [返回首页](../README.md) · [English](USAGE.en.md)
 
-本指南对应 **0.1.0 Windows x64 未签名测试版**。下文使用中文界面入口名称；当前没有已发布、已验收的 macOS 安装版。
+本指南说明 Windows 安装版的使用流程，使用中文界面入口名称。具体版本、平台支持、签名和验证范围以所选应用 Release 为准。
 
 ## 安装与首次启动
 
-从 [v0.1.0 Release](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) 的 Assets 下载安装 EXE 和 SHA256SUMS.txt。在下载目录打开 PowerShell：
+从 [Releases](https://github.com/makesynt/seqvio-studio/releases) 选择 Seqvio Studio 应用发行版，按其说明下载安装 EXE 和同一发布页的 SHA256SUMS.txt。不要选择样片、风格包或媒体工具源码发布。在下载目录打开 PowerShell：
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-0.1.0-win-x64-Setup.exe
+Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-将结果与同一 Release 的校验文件核对。安装包约 188.8 MB，解压后的应用文件约 562.4 MB；此外还需要给项目、音频、视频和下载缓存预留空间。不能仅按安装包大小估算磁盘需求。
+按文件名将结果与同一 Release 的校验文件核对；具体大小及磁盘需求以发行说明为准，并为项目、音频、视频和缓存预留额外空间。
 
 运行安装程序，选择安装目录，完成后通过桌面或开始菜单启动。安装版自带应用运行时和媒体工具，无需为 Seqvio 本身另外安装 Node.js、npm、Python 或 FFmpeg；你选择的 Agent CLI 仍需按其安装方式准备环境。
 
-此版未签名，可能出现“未知发布者”“Windows 已保护你的电脑”等提示。核对来源后，是否能继续取决于设备提供的选项和安全策略；部分智能应用控制或企业策略会直接阻止运行。请记录具体拦截信息，不要将未启动误判为渲染故障。参考 [Microsoft 对 SmartScreen 的说明](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)。
+如果所选版本未签名，可能出现“未知发布者”“Windows 已保护你的电脑”等提示。核对来源后，是否能继续取决于设备提供的选项和安全策略；部分智能应用控制或企业策略会直接阻止运行。请记录具体拦截信息，不要将未启动误判为渲染故障。参考 [Microsoft 对 SmartScreen 的说明](https://learn.microsoft.com/windows/apps/package-and-deploy/smartscreen-reputation)。
 
 ## 配置创作引擎
 
@@ -38,7 +38,7 @@ Windows 桌面应用需要能找到本机 CLI 可执行程序。先在终端验�
 
 ### 风格库
 
-可从[风格包下载目录](STYLE-PACKS.md)获取 41 套可导入 ZIP 或合集。安装版已内置这些风格；需要个人副本时，下载单包并通过“自定义 → 导入风格包”导入。合集必须先解压，再逐个导入其中的 ZIP。
+从[风格包下载与自定义指南](STYLE-PACKS.md)获取现有包，可修改后导入，也可参考格式自建风格包。安装版已内置原风格；自定义时设置自己的 ID/名称，或保留 ID 并增加版本，再通过“自定义 → 导入风格包”导入。合集需先解压。
 
 进入“风格库”，浏览 41 套内置风格。封面和静音短循环随包提供；打开完整样片时才下载相应视频，校验后缓存。短循环没有声音是预期行为，不表示配音损坏。
 
@@ -129,6 +129,6 @@ Windows 安装包内已有 FFmpeg/ffprobe。默认 Virgil、Long Cang 和界面�
 
 项目和产物保存在本机。备份应包含项目目录及相关素材；仅导出的方案或字幕不能替代完整项目备份。不要随意删除项目内部缓存和场景文件来解决未知错误。
 
-在 **设置 → 关于与诊断 → 第三方许可与源码** 查看随包许可。FFmpeg/ffprobe 完整对应源码和构建记录见 [source v2 Release](https://github.com/makesynt/seqvio-studio/releases/tag/ffmpeg-seqvio-source-v2)。
+在 **设置 → 关于与诊断 → 第三方许可与源码** 查看随包许可。FFmpeg/ffprobe 对应源码和构建记录以该应用版本的发布说明及应用内链接为准，资源发布可在 [Releases](https://github.com/makesynt/seqvio-studio/releases) 查找。
 
 在 [Issues](https://github.com/makesynt/seqvio-studio/issues) 反馈时提供应用版本、Windows 版本、引擎/模型、失败阶段、具体报错及最小复现步骤。提交截图、日志或项目片段前，移除 API Key、令牌和私人资料。

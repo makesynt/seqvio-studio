@@ -6,7 +6,7 @@
 
 [简体中文](README.md) · English
 
-[Download](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) · [User guide](docs/USAGE.en.md) · [Style packs](docs/STYLE-PACKS.md) · [Style samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
+[Download](https://github.com/makesynt/seqvio-studio/releases) · [User guide](docs/USAGE.en.md) · [Style packs](docs/STYLE-PACKS.md) · [Style samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
 
 Seqvio Studio is a local desktop workspace for creating videos. Start with a topic, reference material, or a complete script. Connect your own OpenCode, Codex, or Antigravity installation, then work through an outline, scenes and narration, visual authoring, keyframe review, voiceover, and video export.
 
@@ -26,35 +26,27 @@ The agent writes visuals and animation using the selected style. The Seqvio engi
 
 ## Download and install
 
-The current public release is **0.1.0, an unsigned Windows x64 preview**. A macOS installer has not been released; Windows validation does not establish macOS compatibility.
+Installers are published in [GitHub Releases](https://github.com/makesynt/seqvio-studio/releases). Select a **Seqvio Studio application release**, rather than a sample-video, style-pack, or FFmpeg source release. Test builds are marked **Pre-release**.
 
-1. Open the [v0.1.0 release](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0).
-2. Under **Assets**, download [`Seqvio-Studio-0.1.0-win-x64-Setup.exe`](https://github.com/makesynt/seqvio-studio/releases/download/v0.1.0/Seqvio-Studio-0.1.0-win-x64-Setup.exe), approximately **188.8 MB**.
-3. Download [`SHA256SUMS.txt`](https://github.com/makesynt/seqvio-studio/releases/download/v0.1.0/SHA256SUMS.txt), verify the installer, then run it and choose an installation directory.
-4. Launch **Seqvio Studio** from the desktop or Start menu, then configure a creation engine as described below.
-
-Verify the file in PowerShell:
+1. Read the selected application's release notes for operating systems, CPU architectures, signing status, and known issues.
+2. Under **Assets**, download the installer matching your device and **SHA256SUMS.txt** from the same release. That page is the source of truth for filenames, versions, sizes, and checksums.
+3. For Windows, run the command below in your download directory, compare each filename/hash with the checksum list, then run the installer.
+4. Launch **Seqvio Studio** and configure a creation engine as described below. Follow the relevant release notes for other platforms.
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-0.1.0-win-x64-Setup.exe
+Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-Installer SHA-256 for this release:
+Unsigned builds may trigger an unknown-publisher or SmartScreen warning, and device policies may block execution. Verify the source and checksum before proceeding through options permitted by your system. See [installation and troubleshooting](docs/USAGE.en.md#installation-and-first-launch).
 
-```text
-9f4b58131b5f5f1f597f531e7f3357a0eb2df0134fa8d5caa00cd95181809d2d
-```
-
-This preview is not code signed. Windows may show an unknown-publisher or SmartScreen warning, and some device policies may block it. Confirm the download source and checksum before proceeding through any options allowed by your system. See [installation and troubleshooting](docs/USAGE.en.md#installation-and-first-launch).
-
-GitHub's automatically generated **Source code (zip/tar.gz)** downloads are snapshots of this distribution repository, not installers. This repository hosts product documentation, releases, samples, and third-party build material. It does not contain the complete desktop application development project; cloning it and running `npm install` will not launch the app.
+GitHub's automatically generated **Source code (zip/tar.gz)** downloads are distribution-repository snapshots, not installers. This repository hosts documentation, releases, samples, and third-party build material. It does not contain the complete desktop application development project; cloning it and running `npm install` will not launch the app.
 
 ## What is included?
 
 | Component | Delivery |
 | --- | --- |
 | Desktop app, Electron, and the default Chromium rendering backend | Included in the installer |
-| FFmpeg 8.1.3 source v2 and ffprobe | Included in the Windows installer; available offline |
+| FFmpeg and ffprobe | Included in the Windows installer; available offline |
 | 41 styles, covers, and silent short preview loops | Included in the installer |
 | Inter and Noto Sans SC UI fonts; Virgil and Long Cang default whiteboard fonts | Included; available offline |
 | Full style sample videos | Downloaded from this repository's GitHub Releases on first preview, verified, and cached |
@@ -65,9 +57,11 @@ GitHub's automatically generated **Source code (zip/tar.gz)** downloads are snap
 
 The bundled media tools include x265, Windows hardware codecs, and multiple audio libraries. **The export interface still defaults to H.264/AAC MP4**; including x265 does not add an H.265 export option. GPU selection depends on hardware, drivers, and measured speed. Initial capability probing adds overhead.
 
-### Download and import style packs
+### Style pack downloads and customization
 
-The [41-pack catalog and instructions](docs/STYLE-PACKS.md) provide individual ZIPs and an [all-packs collection](https://github.com/makesynt/seqvio-studio/releases/download/style-packs-v1/seqvio-style-packs-v1-all.zip), about 13.9 MB. Extract the collection first, then import its individual style ZIPs one at a time through Custom → Import style package (自定义 → 导入风格包). These styles are already bundled, so importing them again is optional. Downloadable packs use personal `custom-` IDs and do not overwrite built-ins. See the catalog for version and conflict handling.
+Download an existing pack from the [catalog and format guide](docs/STYLE-PACKS.md), extract it, customize its rules, palette, typography, motion, and declared assets, then import your own style. You can also follow the package format to create a style from scratch. The originals are bundled with the app, so importing them again is unnecessary for normal use.
+
+Use your own ID and name, or increase the version whenever you change an existing package's content. ZIP one package and import it through Custom → Import style package (自定义 → 导入风格包). Extract collections before importing their individual ZIPs. The guide covers required files, configuration, assets, and version conflicts.
 
 ## Create your first video
 
@@ -89,6 +83,27 @@ Local rendering does not make model inference offline. AI creation uses the mode
 
 ## Licenses, source, and feedback
 
-Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for local notices and source links. FFmpeg/ffprobe are distributed as separate tools under GPL-3.0-or-later. Their complete corresponding source, dependencies, build scripts, and records are available in the [FFmpeg source v2 release](https://github.com/makesynt/seqvio-studio/releases/tag/ffmpeg-seqvio-source-v2). Other third-party components retain their respective licenses.
+Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for local notices and source links. FFmpeg/ffprobe are distributed as separate tools under GPL-3.0-or-later. Use the selected application release notes and in-app links for the matching source, dependencies, build scripts, and records, or browse [this repository's releases](https://github.com/makesynt/seqvio-studio/releases). Other third-party components retain their respective licenses.
 
-Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues), including the app version, OS, engine, and reproduction steps. Remove credentials and private material before posting. The current installer has been checked for installation/uninstallation, local speech, both rendering backends, and export. Physical NVIDIA/AMD hardware and macOS have not yet been validated. This preview is under active development.
+Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues), including the app version, OS, engine, and reproduction steps. Remove credentials and private material before posting. Consult each release's notes for its validation scope, known issues, and supported platforms.
+
+## Referenced projects and acknowledgements
+
+Thanks to these open-source projects and their contributors for the engine, style references, runtime, and supporting capabilities used by Seqvio Studio:
+
+| Project | Role in this project |
+| --- | --- |
+| [Seqvio](https://github.com/makesynt/seqvio) | Scene contracts, narration timing, quality checks, and rendering. |
+| [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) | Art-style recipes, animation grammar, and visual references; thanks to alchaincyf / 花叔·花生. |
+| [Electron](https://github.com/electron/electron) / [Chromium](https://www.chromium.org/) | Desktop runtime and browser rendering foundation. |
+| [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | UI, authored scenes, and local 3D visuals. |
+| [Rough.js](https://github.com/rough-stuff/rough) | Sketch-style strokes and whiteboard drawing. |
+| [Excalidraw](https://github.com/excalidraw/excalidraw) | Whiteboard visual references and the Virgil font; the full Excalidraw editor is not embedded. |
+| [FFmpeg](https://ffmpeg.org/) | Media probing, audio/video codecs, mixing, and assembly. |
+| [Puppeteer](https://github.com/puppeteer/puppeteer) / [esbuild](https://github.com/evanw/esbuild) | Browser automation and scene compilation/bundling. |
+| [Shiki](https://github.com/shikijs/shiki) / [Dagre](https://github.com/dagrejs/dagre) | Syntax highlighting and graph layout. |
+| [Acorn](https://github.com/acornjs/acorn) / [Ajv](https://github.com/ajv-validator/ajv) / [yauzl](https://github.com/thejoshwolfe/yauzl) | Syntax parsing, data validation, and ZIP reading. |
+| [OpenCode](https://github.com/anomalyco/opencode) / [Codex CLI](https://github.com/openai/codex) | Optional local creation-agent integrations; install and configure them separately. |
+| [Inter](https://github.com/rsms/inter) / [Noto fonts](https://github.com/notofonts) | UI and multilingual typography. |
+
+This highlights major projects rather than providing an exhaustive dependency or license inventory. Style assets, fonts, and other third-party material retain their respective licenses; see the notices distributed with the relevant release.
