@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "buildId": "ffmpeg-seqvio-source-v2",
+  "platform": "win32-x64",
+  "ffmpegVersion": "8.1.3",
+  "sources": [
+    {
+      "name": "dav1d",
+      "version": "1.5.2",
+      "revision": "c720f4d3556a01916324aea155555d3efba842e8",
+      "url": "https://codeload.github.com/videolan/dav1d/tar.gz/c720f4d3556a01916324aea155555d3efba842e8",
+      "archive": "dav1d-c720f4d3556a01916324aea155555d3efba842e8.tar.gz",
+      "size": 1713218,
+      "sha256": "6b15b0df3c10a60ae912b12e64f731888346d39fdc35d58966f2f26cca95745d"
+    },
+    {
+      "name": "ffmpeg",
+      "version": "8.1.3",
+      "revision": "1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7",
+      "archive": "ffmpeg-1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7.tar.gz",
+      "size": 16920205,
+      "sha256": "a406fe831cbb605f5fe50e43eb566e502ae63ff3b3206bfa744e4b31b8bb73ac"
+    },
+    {
+      "name": "freetype",
+      "version": "2.14.1",
+      "url": "https://download-mirror.savannah.gnu.org/releases/freetype/freetype-2.14.1.tar.xz",
+      "archive": "freetype-2.14.1.tar.xz",
+      "size": 2664948,
+      "sha256": "32427e8c471ac095853212a37aef816c60b42052d4d9e48230bab3bdf2936ccc"
+    },
+    {
+      "name": "fribidi",
+      "version": "1.0.16",
+      "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.16/fribidi-1.0.16.tar.xz",
+      "archive": "fribidi-1.0.16.tar.xz",
+      "size": 1098260,
+      "sha256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c"
+    },
+    {
+      "name": "harfbuzz",
+      "version": "11.5.1",
+      "url": "https://github.com/harfbuzz/harfbuzz/releases/download/11.5.1/harfbuzz-11.5.1.tar.xz",
+      "archive": "harfbuzz-11.5.1.tar.xz",
+      "size": 18212420,
+      "sha256": "972a60a8d274d49e70361da6920c3a73dfb0fb4387f6c6811906a47ba634d8a1"
+    },
+    {
+      "name": "lame",
+      "version": "3.100",
+      "url": "https://distfiles.macports.org/lame/lame-3.100.tar.gz",
+      "upstreamURL": "https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz",
+      "archive": "lame-3.100.tar.gz",
+      "size": 1524133,
+      "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "name": "libass",
+      "version": "0.17.4",
+      "url": "https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz",
+      "archive": "libass-0.17.4.tar.xz",
+      "size": 452648,
+      "sha256": "78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a"
+    },
+    {
+      "name": "x264",
+      "version": "stable-31e19f9",
+      "revision": "31e19f92f00c7003fa115047ce50978bc98c3a0d",
+      "url": "https://codeload.github.com/mirror/x264/tar.gz/31e19f92f00c7003fa115047ce50978bc98c3a0d",
+      "archive": "x264-31e19f92f00c7003fa115047ce50978bc98c3a0d.tar.gz",
+      "size": 943381,
+      "sha256": "d053c9d86988d6bc78237ca5205865c5ddf99c98ef4cd9927eec8f6d388f6dd9"
+    },
+    {
+      "name": "zlib",
+      "version": "1.3.1",
+      "url": "https://github.com/madler/zlib/releases/download/v1.3.1/zlib-1.3.1.tar.xz",
+      "archive": "zlib-1.3.1.tar.xz",
+      "size": 1305740,
+      "sha256": "38ef96b8dfe510d42707d9c781877914792541133e1870841463bfa73f883e32"
+    },
+    {
+      "name": "nv-codec-headers",
+      "version": "12.1.14.1",
+      "archive": "nv-codec-headers-7c8e7fc751f803c672b42c37d9199c8a4f98b327.tar.gz",
+      "url": "https://codeload.github.com/FFmpeg/nv-codec-headers/tar.gz/7c8e7fc751f803c672b42c37d9199c8a4f98b327",
+      "size": 80274,
+      "sha256": "cadb3affdbe9121e411ad5407b686f58deafe3b9b03a3d86af354453a23ebf07",
+      "commit": "7c8e7fc751f803c672b42c37d9199c8a4f98b327",
+      "repository": "https://github.com/FFmpeg/nv-codec-headers"
+    },
+    {
+      "name": "x265",
+      "version": "4.1",
+      "archive": "x265-1d117bed4747758b51bd2c124d738527e30392cb.tar.gz",
+      "url": "https://codeload.github.com/Multicorewareinc/x265/tar.gz/1d117bed4747758b51bd2c124d738527e30392cb",
+      "size": 1727318,
+      "sha256": "ddb45be97924ab3d5da78e9c436418a12f812ae856cf3547e29e2bd69edcdf82",
+      "commit": "1d117bed4747758b51bd2c124d738527e30392cb",
+      "repository": "https://github.com/Multicorewareinc/x265"
+    },
+    {
+      "name": "gme",
+      "version": "0.6.5",
+      "archive": "gme-9e23d10f9fd2a6a2f33b10912dd8dc7153258995.tar.gz",
+      "url": "https://codeload.github.com/libgme/game-music-emu/tar.gz/9e23d10f9fd2a6a2f33b10912dd8dc7153258995",
+      "size": 349726,
+      "sha256": "5e8eb240b03ee76b17aafb2ba52ce838399664fb65a6a7739335a2f581a84e0e",
+      "commit": "9e23d10f9fd2a6a2f33b10912dd8dc7153258995",
+      "repository": "https://github.com/libgme/game-music-emu"
+    },
+    {
+      "name": "rubberband",
+      "version": "4.0.0",
+      "archive": "rubberband-1d95888bec3ae0a17c0c4af791810d5a63f6bc35.tar.gz",
+      "url": "https://codeload.github.com/breakfastquay/rubberband/tar.gz/1d95888bec3ae0a17c0c4af791810d5a63f6bc35",
+      "size": 290593,
+      "sha256": "0d6fe8fcc54d8e0b7da1a67ebdb0129dd62f983ecbfb66650c65f977d46fe20f",
+      "commit": "1d95888bec3ae0a17c0c4af791810d5a63f6bc35",
+      "repository": "https://github.com/breakfastquay/rubberband"
+    },
+    {
+      "name": "libvpl",
+      "version": "2.16.0",
+      "archive": "libvpl-778a66d6c6537f08eabb91955dbbf1bce3812894.tar.gz",
+      "url": "https://codeload.github.com/intel/libvpl/tar.gz/778a66d6c6537f08eabb91955dbbf1bce3812894",
+      "size": 12972496,
+      "sha256": "80107e2ff7a275174e0d3a2cdd007c74d30f37db67b8a773ce9afaa70d93bd6e",
+      "commit": "778a66d6c6537f08eabb91955dbbf1bce3812894",
+      "repository": "https://github.com/intel/libvpl"
+    },
+    {
+      "name": "ogg",
+      "version": "1.3.5",
+      "archive": "libogg-1.3.5.tar.xz",
+      "url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.5.tar.xz",
+      "size": 429076,
+      "sha256": "c4d91be36fc8e54deae7575241e03f4211eb102afb3fc0775fbbc1b740016705"
+    },
+    {
+      "name": "vorbis",
+      "version": "1.3.7",
+      "archive": "libvorbis-1.3.7.tar.xz",
+      "url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz",
+      "size": 1203792,
+      "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+    },
+    {
+      "name": "gsm",
+      "version": "1.0.24",
+      "archive": "gsm-1.0.24.tar.gz",
+      "url": "https://www.quut.com/gsm/gsm-1.0.24.tar.gz",
+      "size": 66597,
+      "sha256": "a3c40c6471928383f4abfcb2e8f24012a1f562be2f17b8d672145d5986681a92"
+    },
+    {
+      "name": "speex",
+      "version": "1.2.1",
+      "archive": "speex-1.2.1.tar.gz",
+      "url": "https://downloads.xiph.org/releases/speex/speex-1.2.1.tar.gz",
+      "size": 1043278,
+      "sha256": "4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea"
+    },
+    {
+      "name": "amf",
+      "version": "1.4.36",
+      "archive": "amf-headers-1.4.36.tar",
+      "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/AMF/tar.gz/16f7d73e0b45c473e903e46981ed0b91efc4c091",
+      "size": 634880,
+      "sha256": "374fe81cdf9e8ac574b9efaa37353ea038bca5bd1afc7a9b74296a6e158884c4",
+      "commit": "16f7d73e0b45c473e903e46981ed0b91efc4c091",
+      "repository": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF",
+      "upstreamArchive": {
+        "archive": "amf-16f7d73e0b45c473e903e46981ed0b91efc4c091.tar.gz",
+        "size": 178978418,
+        "sha256": "4718172ea414a8219ef0e0c7863e127ee0ee6f3094662008f44bfd73ab77a23a"
+      },
+      "selection": "amf-public-headers-v1"
+    },
+    {
+      "name": "openmpt",
+      "version": "0.8.7",
+      "archive": "libopenmpt-0.8.7+release.autotools.tar.gz",
+      "url": "https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.8.7+release.autotools.tar.gz",
+      "size": 1761893,
+      "sha256": "275c29ef47be9992f62a35fcc96f7ca05c06d2fd05c9298b8dee9f743f75b089"
+    },
+    {
+      "name": "opus",
+      "version": "1.5.2",
+      "archive": "opus-1.5.2.tar.gz",
+      "url": "https://downloads.xiph.org/releases/opus/opus-1.5.2.tar.gz",
+      "size": 7839412,
+      "sha256": "65c1d2f78b9f2fb20082c38cbe47c951ad5839345876e46941612ee87f9a7ce1"
+    },
+    {
+      "name": "vo-amrwbenc",
+      "version": "0.1.3",
+      "archive": "vo-amrwbenc-0.1.3.tar.gz",
+      "url": "https://downloads.sourceforge.net/opencore-amr/vo-amrwbenc-0.1.3.tar.gz?use_mirror=netix",
+      "size": 608936,
+      "sha256": "5652b391e0f0e296417b841b02987d3fd33e6c0af342c69542cbb016a71d9d4e",
+      "upstreamURL": "https://downloads.sourceforge.net/project/opencore-amr/vo-amrwbenc/vo-amrwbenc-0.1.3.tar.gz"
+    },
+    {
+      "name": "opencore-amr",
+      "version": "0.1.6",
+      "archive": "opencore-amr-0.1.6.tar.gz",
+      "url": "https://downloads.sourceforge.net/opencore-amr/opencore-amr-0.1.6.tar.gz?use_mirror=netix",
+      "size": 939179,
+      "sha256": "483eb4061088e2b34b358e47540b5d495a96cd468e361050fae615b1809dc4a1",
+      "upstreamURL": "https://downloads.sourceforge.net/project/opencore-amr/opencore-amr/opencore-amr-0.1.6.tar.gz"
+    }
+  ],
+  "errors": []
+}
