@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import hashlib,io,json,pathlib,sys,tarfile,urllib.request
+import hashlib,io,json,pathlib,sys,tarfile,time,urllib.request
 
 def select_amf_headers(data):
     out=io.BytesIO()
@@ -25,7 +25,15 @@ def main():
         target=root/spec['archive']
         if not target.exists():
             request=urllib.request.Request(spec['url'],headers={'User-Agent':'Seqvio-FFmpeg-source-build'})
-            with urllib.request.urlopen(request,timeout=300) as response: data=response.read()
+            for attempt in range(5):
+                try:
+                    print('FETCH',spec['name'],'attempt',attempt+1,flush=True)
+                    with urllib.request.urlopen(request,timeout=300) as response: data=response.read()
+                    break
+                except (OSError,TimeoutError) as error:
+                    if attempt==4:raise
+                    print('RETRY',spec['name'],type(error).__name__,flush=True)
+                    time.sleep(2**attempt)
             if spec.get('selection')=='amf-public-headers-v1':
                 upstream=spec['upstreamArchive']
                 if len(data)!=upstream['size'] or hashlib.sha256(data).hexdigest()!=upstream['sha256']:raise SystemExit('Upstream AMF archive checksum mismatch')
