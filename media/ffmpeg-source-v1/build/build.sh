@@ -37,7 +37,7 @@ cd "$(cat "$WORK/freetype.path")"
 ./configure --host=x86_64-w64-mingw32 --prefix="$PREFIX" --enable-static --disable-shared --with-zlib=yes --with-bzip2=no --with-png=no --with-harfbuzz=no --with-brotli=no
 make -j"$JOBS"; make install
 cd "$(cat "$WORK/harfbuzz.path")"
-meson setup out --cross-file "$BUILD/cross.ini" --prefix "$PREFIX" --libdir lib --buildtype release -Dtests=disabled -Ddocs=disabled -Dutilities=disabled -Dglib=disabled -Dgobject=disabled -Dcairo=disabled -Dicu=disabled -Dgraphite2=disabled -Dfreetype=disabled
+meson setup out --cross-file "$BUILD/cross.ini" --prefix "$PREFIX" --libdir lib --buildtype release -Dtests=disabled -Ddocs=disabled -Dutilities=disabled -Dglib=disabled -Dgobject=disabled -Dcairo=disabled -Dicu=disabled -Dgraphite2=disabled -Dfreetype=enabled
 ninja -C out -j"$JOBS"; ninja -C out install
 cd "$(cat "$WORK/fribidi.path")"
 ./configure --host=x86_64-w64-mingw32 --prefix="$PREFIX" --enable-static --disable-shared --disable-docs
