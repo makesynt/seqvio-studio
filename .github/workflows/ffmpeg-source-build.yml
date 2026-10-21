@@ -1,0 +1,29 @@
+name: Build verified FFmpeg source package
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-x64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install cross compiler and build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-mingw-w64-x86-64-posix g++-mingw-w64-x86-64-posix binutils-mingw-w64-x86-64 make pkg-config meson ninja-build nasm autoconf automake libtool cmake xz-utils python3
+      - name: Build pinned sources
+        run: bash media/ffmpeg-source-v1/build/build.sh
+      - name: Preserve build artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ffmpeg-seqvio-source-v1
+          path: |
+            media/ffmpeg-source-v1/artifacts/*
+            media/ffmpeg-source-v1/work/build.log
+          if-no-files-found: error
+          retention-days: 30

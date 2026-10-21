@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "buildId": "ffmpeg-8.1.3-seqvio-win64-v1",
+  "platform": "win32-x64",
+  "ffmpegVersion": "8.1.3",
+  "sources": [
+    {
+      "name": "ffmpeg",
+      "version": "8.1.3",
+      "revision": "1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7",
+      "archive": "ffmpeg-1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7.tar.gz",
+      "size": 16920205,
+      "sha256": "a406fe831cbb605f5fe50e43eb566e502ae63ff3b3206bfa744e4b31b8bb73ac"
+    },
+    {
+      "name": "freetype",
+      "version": "2.14.1",
+      "url": "https://download-mirror.savannah.gnu.org/releases/freetype/freetype-2.14.1.tar.xz",
+      "archive": "freetype-2.14.1.tar.xz",
+      "size": 2664948,
+      "sha256": "32427e8c471ac095853212a37aef816c60b42052d4d9e48230bab3bdf2936ccc"
+    },
+    {
+      "name": "fribidi",
+      "version": "1.0.16",
+      "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.16/fribidi-1.0.16.tar.xz",
+      "archive": "fribidi-1.0.16.tar.xz",
+      "size": 1098260,
+      "sha256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c"
+    },
+    {
+      "name": "harfbuzz",
+      "version": "11.5.1",
+      "url": "https://github.com/harfbuzz/harfbuzz/releases/download/11.5.1/harfbuzz-11.5.1.tar.xz",
+      "archive": "harfbuzz-11.5.1.tar.xz",
+      "size": 18212420,
+      "sha256": "972a60a8d274d49e70361da6920c3a73dfb0fb4387f6c6811906a47ba634d8a1"
+    },
+    {
+      "name": "lame",
+      "version": "3.100",
+      "url": "https://distfiles.macports.org/lame/lame-3.100.tar.gz",
+      "upstreamURL": "https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz",
+      "archive": "lame-3.100.tar.gz",
+      "size": 1524133,
+      "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "name": "libass",
+      "version": "0.17.4",
+      "url": "https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz",
+      "archive": "libass-0.17.4.tar.xz",
+      "size": 452648,
+      "sha256": "78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a"
+    },
+    {
+      "name": "x264",
+      "version": "stable-31e19f9",
+      "revision": "31e19f92f00c7003fa115047ce50978bc98c3a0d",
+      "url": "https://codeload.github.com/mirror/x264/tar.gz/31e19f92f00c7003fa115047ce50978bc98c3a0d",
+      "archive": "x264-31e19f92f00c7003fa115047ce50978bc98c3a0d.tar.gz",
+      "size": 943381,
+      "sha256": "d053c9d86988d6bc78237ca5205865c5ddf99c98ef4cd9927eec8f6d388f6dd9"
+    },
+    {
+      "name": "zlib",
+      "version": "1.3.1",
+      "url": "https://github.com/madler/zlib/releases/download/v1.3.1/zlib-1.3.1.tar.xz",
+      "archive": "zlib-1.3.1.tar.xz",
+      "size": 1305740,
+      "sha256": "38ef96b8dfe510d42707d9c781877914792541133e1870841463bfa73f883e32"
+    }
+  ],
+  "errors": []
+}
