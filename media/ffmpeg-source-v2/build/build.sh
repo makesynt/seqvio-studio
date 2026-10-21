@@ -98,7 +98,7 @@ for name in ogg vorbis speex opus opencore-amr vo-amrwbenc; do
  make -j"$JOBS";make install
 done
 cd "$(cat "$WORK/gsm.path")"
-make -j"$JOBS" lib/libgsm.a CC="$CC" AR="$AR" RANLIB="$RANLIB" CFLAGS='-O2 -DNeedFunctionPrototypes=1 -DWAV49 -I./inc'
+make -j"$JOBS" lib/libgsm.a CC="$CC" AR="$AR" RANLIB="$RANLIB" CFLAGS='-c -O2 -DNeedFunctionPrototypes=1 -DWAV49 -I./inc'
 mkdir -p "$PREFIX/include/gsm";cp inc/gsm.h "$PREFIX/include/gsm.h";cp inc/gsm.h "$PREFIX/include/gsm/gsm.h";cp lib/libgsm.a "$PREFIX/lib/"
 cmake_cross -S "$(cat "$WORK/gme.path")" -B "$WORK/gme-out" -DGME_BUILD_SHARED=OFF -DGME_BUILD_STATIC=ON -DGME_BUILD_TESTING=OFF -DGME_BUILD_EXAMPLES=OFF -DGME_ZLIB=ON
 cmake --build "$WORK/gme-out" -j "$JOBS";cmake --install "$WORK/gme-out"
