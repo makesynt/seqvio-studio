@@ -6,7 +6,7 @@ lock=json.loads((build/'versions.lock.json').read_text())
 def sha(data): return hashlib.sha256(data).hexdigest()
 source={'schemaVersion':1,'buildId':lock['buildId'],'platform':'win32-x64','ffmpegVersion':lock['ffmpegVersion'],'license':'GPL-3.0-or-later','sources':lock['sources'],'applicationDependenciesComplete':True,'patches':[],'buildRepository':'https://github.com/makesynt/seqvio-studio','buildCommit':os.environ.get('GITHUB_SHA'),'workflowRun':os.environ.get('GITHUB_SERVER_URL','https://github.com')+'/'+os.environ.get('GITHUB_REPOSITORY','makesynt/seqvio-studio')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local'),'toolchainPackages':(out/'toolchain-packages.txt').read_text(),'systemComponents':'Unmodified compiler/build tools and Windows system libraries are not embedded in this source archive. Runtime notices are included below; GCC runtime exceptions and permissive MinGW-w64 runtime terms apply.'}
 licenses=[]
-files={'ffmpeg':['COPYING.GPLv3','LICENSE.md'],'x264':['COPYING'],'zlib':['LICENSE'],'freetype':['docs/FTL.TXT','docs/GPLv2.TXT','docs/LICENSE.TXT'],'harfbuzz':['COPYING'],'fribidi':['COPYING'],'libass':['COPYING'],'lame':['COPYING']}
+files={'ffmpeg':['COPYING.GPLv3','LICENSE.md'],'dav1d':['COPYING'],'x264':['COPYING'],'zlib':['LICENSE'],'freetype':['docs/FTL.TXT','docs/GPLv2.TXT','docs/LICENSE.TXT'],'harfbuzz':['COPYING'],'fribidi':['COPYING'],'libass':['COPYING'],'lame':['COPYING']}
 for spec in lock['sources']:
     archive=root/'sources'/spec['archive']
     if sha(archive.read_bytes())!=spec['sha256']: raise SystemExit('Source changed '+spec['name'])
@@ -39,7 +39,7 @@ shutil.copytree(root/'sources',package/'sources',dirs_exist_ok=True)
 for name in ['source-inventory.json','toolchain-packages.txt','config.h','config_components.h','config.mak','LICENSE.ffmpeg','README.ffmpeg']:
     shutil.copy2(out/name,package/name)
 shutil.copy2(work/'build.log',package/'build.log')
-(package/'REBUILD.md').write_text('Install the Ubuntu 24.04 packages in build/workflow.yml, then run bash build/build.sh from this directory. All eight application/library source archives are included and hash-checked; a normal rebuild does not download these sources. The compiler/build tools are system prerequisites. Output binaries need not be bit-for-bit identical under a different toolchain.\n')
+(package/'REBUILD.md').write_text('Install the Ubuntu 24.04 packages in build/workflow.yml, then run bash build/build.sh from this directory. All nine application/library source archives are included and hash-checked; a normal rebuild does not download these sources. The compiler/build tools are system prerequisites. Output binaries need not be bit-for-bit identical under a different toolchain.\n')
 with tarfile.open(out/'ffmpeg-seqvio-source-v1.tar.gz','w:gz') as archive:archive.add(package,arcname='ffmpeg-seqvio-source-v1')
 assets=[]
 for file in sorted(out.iterdir()):

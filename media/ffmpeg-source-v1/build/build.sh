@@ -30,6 +30,9 @@ JOBS=$(nproc)
 cd "$(cat "$WORK/zlib.path")"
 CHOST=x86_64-w64-mingw32 ./configure --static --prefix="$PREFIX"
 make -j"$JOBS"; make install
+cd "$(cat "$WORK/dav1d.path")"
+meson setup out --wrap-mode=nodownload --cross-file "$BUILD/cross.ini" --prefix "$PREFIX" --libdir lib --buildtype release -Denable_tools=false -Denable_tests=false
+ninja -C out -j"$JOBS"; ninja -C out install
 cd "$(cat "$WORK/x264.path")"
 ./configure --host=x86_64-w64-mingw32 --cross-prefix=x86_64-w64-mingw32- --prefix="$PREFIX" --enable-static --disable-cli --disable-opencl --enable-win32thread
 make -j"$JOBS"; make install
@@ -37,7 +40,7 @@ cd "$(cat "$WORK/freetype.path")"
 ./configure --host=x86_64-w64-mingw32 --prefix="$PREFIX" --enable-static --disable-shared --with-zlib=yes --with-bzip2=no --with-png=no --with-harfbuzz=no --with-brotli=no
 make -j"$JOBS"; make install
 cd "$(cat "$WORK/harfbuzz.path")"
-meson setup out --cross-file "$BUILD/cross.ini" --prefix "$PREFIX" --libdir lib --buildtype release -Dtests=disabled -Ddocs=disabled -Dutilities=disabled -Dglib=disabled -Dgobject=disabled -Dcairo=disabled -Dicu=disabled -Dgraphite2=disabled -Dfreetype=enabled
+meson setup out --wrap-mode=nodownload --cross-file "$BUILD/cross.ini" --prefix "$PREFIX" --libdir lib --buildtype release -Dtests=disabled -Ddocs=disabled -Dutilities=disabled -Dglib=disabled -Dgobject=disabled -Dcairo=disabled -Dicu=disabled -Dgraphite2=disabled -Dfreetype=enabled
 ninja -C out -j"$JOBS"; ninja -C out install
 cd "$(cat "$WORK/fribidi.path")"
 ./configure --host=x86_64-w64-mingw32 --prefix="$PREFIX" --enable-static --disable-shared --disable-docs
@@ -49,7 +52,7 @@ cd "$(cat "$WORK/lame.path")"
 ./configure --host=x86_64-w64-mingw32 --prefix="$PREFIX" --enable-static --disable-shared --disable-frontend --disable-analyzer-hooks --disable-decoder
 make -j"$JOBS"; make install
 cd "$(cat "$WORK/ffmpeg.path")"
-./configure --prefix="$PREFIX" --target-os=mingw32 --arch=x86_64 --enable-cross-compile --cross-prefix=x86_64-w64-mingw32- --cc="$CC" --cxx="$CXX" --pkg-config=pkg-config --pkg-config-flags=--static --enable-gpl --enable-version3 --enable-static --disable-shared --disable-autodetect --disable-debug --disable-doc --disable-ffplay --enable-schannel --enable-zlib --enable-libx264 --enable-libfreetype --enable-libharfbuzz --enable-libfribidi --enable-libass --enable-libmp3lame --extra-version=seqvio-source-v1 --extra-cflags="-I$PREFIX/include" --extra-ldflags="-L$PREFIX/lib -static -static-libgcc -static-libstdc++" --extra-libs="-lstdc++ -lwinpthread -lws2_32"
+./configure --prefix="$PREFIX" --target-os=mingw32 --arch=x86_64 --enable-cross-compile --cross-prefix=x86_64-w64-mingw32- --cc="$CC" --cxx="$CXX" --pkg-config=pkg-config --pkg-config-flags=--static --enable-gpl --enable-version3 --enable-static --disable-shared --disable-autodetect --disable-debug --disable-doc --disable-ffplay --enable-schannel --enable-zlib --enable-libx264 --enable-libdav1d --enable-libfreetype --enable-libharfbuzz --enable-libfribidi --enable-libass --enable-libmp3lame --extra-version=seqvio-source-v1 --extra-cflags="-I$PREFIX/include" --extra-ldflags="-L$PREFIX/lib -static -static-libgcc -static-libstdc++" --extra-libs="-lstdc++ -lwinpthread -lws2_32"
 make -j"$JOBS"
 cp ffmpeg.exe ffprobe.exe "$ARTIFACTS/"
 cp config.h config_components.h ffbuild/config.mak "$ARTIFACTS/"

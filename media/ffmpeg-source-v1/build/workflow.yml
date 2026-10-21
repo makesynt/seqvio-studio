@@ -15,8 +15,11 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y gcc-mingw-w64-x86-64-posix g++-mingw-w64-x86-64-posix binutils-mingw-w64-x86-64 make pkg-config meson ninja-build nasm autoconf automake libtool cmake xz-utils python3
-      - name: Build pinned sources
-        run: bash media/ffmpeg-source-v1/build/build.sh
+      - name: Fetch and verify all source inputs
+        run: python3 media/ffmpeg-source-v1/build/fetch-sources.py
+      - name: Build pinned sources with networking disabled
+        run: |
+          sudo unshare --net -- env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_REPOSITORY="$GITHUB_REPOSITORY" GITHUB_SERVER_URL="$GITHUB_SERVER_URL" bash media/ffmpeg-source-v1/build/build.sh
       - name: Preserve build artifacts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
