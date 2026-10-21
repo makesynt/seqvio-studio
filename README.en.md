@@ -6,7 +6,7 @@
 
 [简体中文](README.md) · English
 
-[Download](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) · [User guide](docs/USAGE.en.md) · [Style samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
+[Download](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) · [User guide](docs/USAGE.en.md) · [Style packs](docs/STYLE-PACKS.md) · [Style samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
 
 Seqvio Studio is a local desktop workspace for creating videos. Start with a topic, reference material, or a complete script. Connect your own OpenCode, Codex, or Antigravity installation, then work through an outline, scenes and narration, visual authoring, keyframe review, voiceover, and video export.
 
@@ -64,6 +64,10 @@ GitHub's automatically generated **Source code (zip/tar.gz)** downloads are snap
 | Cloud voiceover or a self-hosted CosyVoice service | Supply your own service and credentials; Windows system speech needs no cloud service |
 
 The bundled media tools include x265, Windows hardware codecs, and multiple audio libraries. **The export interface still defaults to H.264/AAC MP4**; including x265 does not add an H.265 export option. GPU selection depends on hardware, drivers, and measured speed. Initial capability probing adds overhead.
+
+### Download and import style packs
+
+The [41-pack catalog and instructions](docs/STYLE-PACKS.md) provide individual ZIPs and an [all-packs collection](https://github.com/makesynt/seqvio-studio/releases/download/style-packs-v1/seqvio-style-packs-v1-all.zip), about 13.9 MB. Extract the collection first, then import its individual style ZIPs one at a time through Custom → Import style package (自定义 → 导入风格包). These styles are already bundled, so importing them again is optional. Downloadable packs use personal `custom-` IDs and do not overwrite built-ins. See the catalog for version and conflict handling.
 
 ## Create your first video
 

@@ -38,6 +38,8 @@ For a nonstandard CLI location, set `OPENCODE_CMD`, `CODEX_CMD`, or `ANTIGRAVITY
 
 ### Style library
 
+The [style-pack catalog](STYLE-PACKS.md) offers 41 importable ZIPs and an all-packs collection. The app already bundles these styles. For personal copies, download an individual ZIP and use Custom → Import style package (自定义 → 导入风格包). Extract the collection before importing its ZIPs one at a time.
+
 Browse the 41 built-in styles. Covers and silent short loops are bundled. Opening a full sample downloads only that video, verifies it, and caches it. Silent hover loops are intentional, not a voiceover failure.
 
 The first full-sample preview needs access to GitHub Releases. Retry after interruptions; downloads support resume. Completed samples play offline. Remove a sample in its preview, or clear all sample caches under **Settings → Storage**. The next preview after removal needs another download.

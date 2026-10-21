@@ -6,7 +6,7 @@
 
 简体中文 · [English](README.en.md)
 
-[下载安装](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) · [完整使用指南](docs/USAGE.zh-CN.md) · [风格样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
+[下载安装](https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.0) · [完整使用指南](docs/USAGE.zh-CN.md) · [风格包下载](docs/STYLE-PACKS.md) · [风格样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
 
 Seqvio Studio 是一款本地桌面视频创作工作台。输入主题、资料或完整稿件，连接你自己的 OpenCode、Codex 或 Antigravity，逐步完成内容规划、分镜与旁白、画面编写、关键帧审阅、配音和视频导出。
 
@@ -64,6 +64,10 @@ GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照�
 | 云端配音或自托管 CosyVoice | 用户自行准备服务及凭据；Windows 系统配音无需云服务 |
 
 随包媒体工具包含 x265、Windows GPU 编解码及多种音频库。**当前导出界面仍以 H.264/AAC MP4 为默认输出**，包含 x265 不代表增加了 H.265 导出选项。GPU 是否启用取决于设备、驱动及实际速度，首次探测有额外开销。
+
+### 下载与导入风格包
+
+[41 套风格包目录与说明](docs/STYLE-PACKS.md)提供单包及[全量合集下载](https://github.com/makesynt/seqvio-studio/releases/download/style-packs-v1/seqvio-style-packs-v1-all.zip)（约 13.9 MB）。合集先解压，再逐个导入其中的风格 ZIP；单包可在“自定义 → 导入风格包”直接选择。安装版已内置这些风格，通常无需重复导入。下载包使用 `custom-` ID 的个人副本，不覆盖内置风格；更多版本与冲突处理见目录说明。
 
 ## 第一次制作视频
 
