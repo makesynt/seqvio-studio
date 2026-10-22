@@ -9,10 +9,7 @@
   <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — six selected styles: stickman, Bauhaus, flat explainers, blackboard, retro pixels and animated cinema" width="1200">
 </picture>
 
-
-Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自己的 OpenCode、Codex 或 Antigravity，让 Agent 根据主题与风格编写画面和动画，在草案、分镜和关键帧阶段确认方向，再由 Seqvio 完成配音映射、质检与渲染。
-
-> **开始前**：请准备一个可用的本机 Agent CLI 及模型权限。安装包包含渲染运行时和媒体工具，不包含模型账号、订阅或额度。
+Seqvio Studio 是一款 AI 辅助的本地视频创作工作台，内置 41 套视觉风格。连接 OpenCode、Codex 或 Antigravity 编写画面与动画，审阅关键帧后完成配音、质检和视频导出。
 
 ## 从内容到成片，保留创作的控制权
 
@@ -23,22 +20,11 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
   <img src="docs/images/readme/workflow-zh-light.png" alt="创作流程：资料与风格 → Agent 创作 → 由你审阅确认 → 本地制作导出；修改后审阅受影响画面并复用有效产物。" width="1440">
 </picture>
 
-建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
-
-<details>
-<summary>查看流程与能力文字说明</summary>
-
-| 内容与风格 | 制作与修改 |
-| --- | --- |
-| **资料驱动的创作**<br>从主题、稿件、链接或本地资料开始，先确定结构，再规划分镜与旁白。 | **先看画面，再制作**<br>审阅关键帧和质检提醒，确认当前内容与输出规格。 |
-| **41 套内置视觉风格**<br>图解、白板、动态文字、拼贴与艺术表达；支持自定义风格包。 | **修改一镜，复用其余**<br>保留有效缓存，取消或中断后按检查点继续。 |
-| **代码驱动的画面**<br>组合文字、图片、SVG、Canvas 与 Three.js，形成可修改的视觉表达。 | **本地制作与导出**<br>完成场景渲染、配音与视频合成；适合时使用 GPU，并保留 CPU 回退。 |
-
-</details>
+在项目会话中提出修改，重新审阅受影响的画面后再制作；中断后可从已保存的进度继续。[查看使用指南](docs/USAGE.zh-CN.md)
 
 ## 精选风格
 
-六种风格的完整样片合集，按上方顺序串联；保留原样片音轨。
+六种风格合集，保留原样片音轨。
 
 https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 
@@ -57,7 +43,7 @@ https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 </tr>
 </table>
 
-样片展示风格方向，实际作品由主题、资料、所选模型与审阅修改共同决定。 [浏览全部样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [下载风格包](docs/STYLE-PACKS.md) · [样片与音乐署名](docs/SHOWCASE-CREDITS.md)
+[浏览全部样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [下载风格包](docs/STYLE-PACKS.md) · [样片与音乐署名](docs/SHOWCASE-CREDITS.md)
 
 <details>
 <summary>查看应用实际界面：风格库</summary>
@@ -68,93 +54,44 @@ https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 
 ## 下载与安装
 
-| 平台 | 公开发行状态 |
-| --- | --- |
-| Windows x64 | 已提供安装测试版；查看各版本的签名状态、已知问题与验证范围。 |
-| macOS / Linux | 尚未提供已验收的安装包；不将 Windows 验证结果视为其他平台已验证。 |
+目前提供 **Windows x64 测试版**；macOS、Linux 安装包尚未发布。
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/install-zh-dark-mobile.png">
-  <source media="(max-width: 600px)" srcset="docs/images/readme/install-zh-light-mobile.png">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/install-zh-dark.png">
-  <img src="docs/images/readme/install-zh-light.png" alt="安装流程：选择应用发行版 → 下载安装包与同一版本的校验文件 → 核对后安装并配置 Agent。" width="1440">
-</picture>
+1. 打开 [Releases](https://github.com/makesynt/seqvio-studio/releases)，选择 **Seqvio Studio 应用发行版**，下载 Assets 中的安装包和 `SHA256SUMS.txt`，核对后安装。不要下载自动生成的 Source code 压缩包。
+2. 安装并登录一个支持的 Agent CLI（OpenCode、Codex 或 Antigravity），准备可用的模型权限与额度。
+3. 启动应用，配置 Agent，新建项目并选择风格，按提示完成创作与审阅。[详细步骤](docs/USAGE.zh-CN.md)
 
 <details>
-<summary>查看下载与安装文字说明</summary>
+<summary>校验安装包</summary>
 
-1. 打开 [Releases](https://github.com/makesynt/seqvio-studio/releases)，选择 **Seqvio Studio 应用发行版**。同一列表也有风格包、样片和 FFmpeg 源码，下载时请区分。
-2. 从该版本 **Assets** 下载适合设备的安装包与 **SHA256SUMS.txt**，核对后安装。版本、大小和校验值均以该发布页为准。
-3. 启动应用并配置 Agent。Seqvio 安装版本身不需要另装 Node.js、Python 或 FFmpeg；所选 CLI 的安装要求以其官方说明为准。
-
-</details>
-
-<details>
-<summary>Windows 校验命令与未签名版本说明</summary>
-
-在下载目录执行：
+在下载目录执行，将结果与同一发布页的 `SHA256SUMS.txt` 核对：
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-按文件名与同一 Release 的校验清单核对。未签名版本可能触发未知发布者、SmartScreen 或设备策略拦截；确认来源后，仅使用系统允许的方式继续。
+未签名版本可能触发 Windows 安全提示，签名状态见发布说明。
 
 </details>
 
-本仓库用于产品文档与公开分发，不包含完整应用开发工程。GitHub 自动生成的 **Source code ZIP/TAR** 是仓库快照，不是安装包。
-
-## 随包提供，还是按需准备？
-
-| 随 Windows 安装包提供 | 首次使用或由你准备 |
-| --- | --- |
-| Electron 与默认 Chromium 渲染后端；FFmpeg / ffprobe。 | 完整风格样片、其他五款白板字体和可选 Chrome：按需下载、校验并缓存。 |
-| 内置风格、封面、静音短循环；Inter、Noto Sans SC、Virgil 和 Long Cang 字体。 | OpenCode / Codex / Antigravity CLI 及可用模型；任选一个引擎，自行完成登录与服务配置。 |
-| Windows 系统语音可使用本机已有音色；也可选择无配音。 | MiniMax 等在线配音需对应凭据与额度；自托管 CosyVoice 需可访问的服务。 |
-
-已缓存资源可离线复用；默认本地渲染无需另外下载 Chrome。**本地渲染不等于 AI 离线**：模型调用、审图或云端配音可能仍需网络。当前默认导出 H.264/AAC MP4；包含 x265 不等于界面提供 H.265 导出选项。
+安装包已含渲染运行时、FFmpeg/ffprobe、内置风格和默认字体。完整样片、额外字体与可选 Chrome 按需下载并缓存，可在缓存后离线使用。Agent 模型和在线配音需另行配置，通常需要网络。
 
 ## 风格包下载与自定义
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/customize-zh-dark-mobile.png">
-  <source media="(max-width: 600px)" srcset="docs/images/readme/customize-zh-light-mobile.png">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/customize-zh-dark.png">
-  <img src="docs/images/readme/customize-zh-light.png" alt="风格包自定义：下载并解压 → 修改规则、配色与资源 → 设置 ID 和版本 → 导入并试做；也可参考格式自建。" width="1440">
-</picture>
+内置风格可直接使用。需要定制时：
 
-下载现有包，修改规则、配色、排版、动效和声明的资源后导入；也可参考格式从头制作自己的包。安装版已内置原风格，通常无需重复导入。
+1. 从[风格包发布页](https://github.com/makesynt/seqvio-studio/releases/tag/style-packs-v1)下载单包或合集；合集须先解压，取出所需的单包 ZIP。
+2. 解压单包，修改规则、配色、排版、动效或资源，也可参考格式制作自己的风格包。
+3. 按[风格包指南](docs/STYLE-PACKS.md)设置 ID 与版本，重新打包，通过应用的“自定义 → 导入风格包”导入。
 
-全量合集须先解压，再逐个导入单包。完整格式、资源与版本规则见[风格包指南](docs/STYLE-PACKS.md)。
+## 数据与隐私
 
-## 使用前值得了解
-
-<details>
-<summary>如何修改内容与恢复项目？</summary>
-
-通过项目会话说明要修改的内容，由 Agent 调整相关分镜、画面或旁白。修改后重新审阅受影响的内容与关键帧，确认后重新制作并检查视频预览。当前界面已隐藏元素编辑与手动编辑入口。取消或中断会保留检查点及有效产物；重新打开项目后，可基于已保存的进度继续制作。更多流程见[使用指南](docs/USAGE.zh-CN.md)。
-
-</details>
-
-<details>
-<summary>资料存在哪里，哪些内容会交给模型？</summary>
-
-项目和产物保存在本机。创作资料、提示词、风格参考图和审图关键帧可能交给所选模型；在线配音将旁白交给对应服务，并可能计费。只提供准备交给这些服务处理的内容。备份时同时保留项目目录与素材。
-
-</details>
-
-<details>
-<summary>字幕、GPU 和离线使用有哪些边界？</summary>
-
-字幕与句内短语时间目前为估算，不是逐词强制对齐；SRT 字幕单独导出，不代表自动烧录。GPU 由设备、驱动、任务与实测速度决定，首次探测有额外开销，使用 CPU 可能是更合适的选择。完整样片和可选字体需先缓存才能离线使用。
-
-</details>
+项目与产物保存在本机；创作资料、提示词和审图画面可能发送给所选模型，在线配音会将旁白发送给对应服务。备份时请同时保留项目目录与素材。
 
 ## 许可与反馈
 
-FFmpeg/ffprobe 作为独立工具随包提供，许可为 GPL-3.0-or-later。应用内“设置 → 关于与诊断 → 第三方许可与源码”提供其本地许可与对应源码入口；其他组件按随包版权与许可说明使用。对应源码与构建资料以所选应用发行版的发布说明为准。
+FFmpeg/ffprobe 随包提供，采用 GPL-3.0-or-later 许可。许可与对应源码入口见“设置 → 关于与诊断 → 第三方许可与源码”及应用发布说明；其他组件遵循随包许可。
 
-遇到问题可提交 [Issue](https://github.com/makesynt/seqvio-studio/issues)，附应用版本、系统、引擎/模型和复现步骤，先移除密钥与私人资料。
+问题请提交至 [Issues](https://github.com/makesynt/seqvio-studio/issues)，附版本、系统与复现步骤，并移除密钥和私人资料。
 
 ## 参考项目与致谢
 
@@ -181,4 +118,3 @@ Seqvio Studio 的场景、时序、质检与渲染能力基于同样由本项目
 </details>
 
 字体、素材和第三方组件保留各自许可。以上致谢不替代随发行版提供的完整版权与许可说明。
-

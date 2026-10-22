@@ -9,10 +9,7 @@
   <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — six selected styles: stickman, Bauhaus, flat explainers, blackboard, retro pixels and animated cinema" width="1200">
 </picture>
 
-
-Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode, Codex, or Antigravity. Let the agent author visuals and animation, review the outline, scenes, and keyframes, then use Seqvio for narration timing, quality checks, and rendering.
-
-> **Before you begin:** prepare a working local agent CLI and model access. The installer includes the rendering runtime and media tools, not model accounts, subscriptions, or quota.
+Seqvio Studio is an AI-assisted desktop workspace for video creation, with 41 built-in visual styles. Connect OpenCode, Codex, or Antigravity to create scenes and animation, review keyframes, then generate narration and render locally.
 
 ## Keep control from first idea to final video
 
@@ -23,22 +20,11 @@ Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode
   <img src="docs/images/readme/workflow-en-light.png" alt="Creative workflow: material and style → agent creation → your review and approval → local production and export; review changes and reuse valid outputs." width="1440">
 </picture>
 
-Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
-
-<details>
-<summary>Text description of the workflow and capabilities</summary>
-
-| Content and visual language | Production and revision |
-| --- | --- |
-| **Start with your material**<br>Use a topic, script, links, or local references. Establish the structure before scenes and narration. | **Review before production**<br>Inspect keyframes and quality findings, then approve the current content and output settings. |
-| **41 built-in styles**<br>Diagrams, whiteboards, kinetic type, collage, and artistic looks, plus custom style packages. | **Change one scene, reuse the rest**<br>Keep valid cached outputs and resume from checkpoints after cancellation or interruption. |
-| **Code-driven visuals**<br>Combine text, images, SVG, Canvas, and Three.js into revisable scenes. | **Local production and export**<br>Render scenes, generate narration, and assemble videos. Use suitable GPU codecs with CPU fallback. |
-
-</details>
+Describe revisions in the project conversation, review the affected scenes, then regenerate. Interrupted production can resume from saved progress. [User guide](docs/USAGE.en.md)
 
 ## Featured styles
 
-A compilation of six complete samples in the order shown above, with their original audio.
+Six styles in one compilation, with original audio.
 
 https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 
@@ -57,7 +43,7 @@ https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 </tr>
 </table>
 
-Samples illustrate a visual direction. Results depend on your topic, references, selected model and review. [Browse all samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [Download style packs](docs/STYLE-PACKS.md) · [Sample and music credits](docs/SHOWCASE-CREDITS.md)
+[Browse all samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [Download style packs](docs/STYLE-PACKS.md) · [Sample and music credits](docs/SHOWCASE-CREDITS.md)
 
 <details>
 <summary>See the actual app: style library</summary>
@@ -68,93 +54,44 @@ Samples illustrate a visual direction. Results depend on your topic, references,
 
 ## Download and install
 
-| Platform | Public distribution status |
-| --- | --- |
-| Windows x64 | Installer preview available. Check each release for signing status, known issues, and validation scope. |
-| macOS / Linux | No validated installers are published. Windows results do not establish support on other platforms. |
+A **Windows x64 preview** is available. macOS and Linux installers are not yet published.
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/install-en-dark-mobile.png">
-  <source media="(max-width: 600px)" srcset="docs/images/readme/install-en-light-mobile.png">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/install-en-dark.png">
-  <img src="docs/images/readme/install-en-light.png" alt="Install: choose the application release, download the installer and matching checksums, verify, install and configure an agent." width="1440">
-</picture>
+1. Open [Releases](https://github.com/makesynt/seqvio-studio/releases) and select a **Seqvio Studio application release**. Download the installer and `SHA256SUMS.txt` from Assets, verify, then install. The auto-generated Source code archives are not installers.
+2. Install and sign in to a supported agent CLI (OpenCode, Codex, or Antigravity), with working model access and quota.
+3. Launch the app, configure the agent, create a project, and choose a style. Follow the prompts to create and review your video. [Full walkthrough](docs/USAGE.en.md)
 
 <details>
-<summary>Text instructions for download and installation</summary>
+<summary>Verify the installer</summary>
 
-1. Open [Releases](https://github.com/makesynt/seqvio-studio/releases) and select a **Seqvio Studio application release**. Samples, style packs, and FFmpeg source share the release list, so check what you are downloading.
-2. Download the matching installer and **SHA256SUMS.txt** from that release's **Assets**. Verify before installing; filenames, versions, sizes, and checksums live on the release page.
-3. Launch the app and configure an agent. Seqvio itself needs no separate Node.js, Python, or FFmpeg installation; follow the chosen CLI's own setup requirements.
-
-</details>
-
-<details>
-<summary>Windows checksum command and unsigned builds</summary>
-
-Run in the download directory:
+Run in the download directory and compare the result with `SHA256SUMS.txt` from the same release:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-Match each filename/hash with the same release's checksum list. Unsigned builds may trigger unknown-publisher, SmartScreen, or device-policy blocks. Verify the source and use only options permitted by your system.
+Unsigned builds may trigger Windows security prompts. Check the release notes for signing status.
 
 </details>
 
-This is a documentation and distribution repository, not the complete application development project. GitHub-generated **Source code ZIP/TAR** files are repository snapshots, not installers.
-
-## Bundled or prepared on demand?
-
-| Included in the Windows installer | Downloaded or configured separately |
-| --- | --- |
-| Electron/default Chromium renderer; FFmpeg and ffprobe. | Full sample videos, five optional whiteboard fonts, and the optional Chrome backend: downloaded, verified, and cached as needed. |
-| Built-in styles, covers, silent loops, and Inter, Noto Sans SC, Virgil, and Long Cang fonts. | OpenCode / Codex / Antigravity CLI and model access. Choose one engine and supply your own authentication/configuration. |
-| Windows system speech uses voices installed on your PC; no voiceover is also an option. | Online speech such as MiniMax needs credentials/quota; self-hosted CosyVoice needs a reachable service. |
-
-Completed caches can be reused offline, and the default renderer needs no separate Chrome download. **Local rendering is not offline AI:** model calls, image review, or cloud speech may still need network access. Default export is H.264/AAC MP4; bundled x265 does not add an H.265 export control.
+The installer includes the rendering runtime, FFmpeg/ffprobe, built-in styles, and default fonts. Full samples, extra fonts, and optional Chrome are downloaded as needed and cached for offline reuse. Agent models and online speech require separate setup and usually need a network connection.
 
 ## Style pack downloads and customization
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/customize-en-dark-mobile.png">
-  <source media="(max-width: 600px)" srcset="docs/images/readme/customize-en-light-mobile.png">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/customize-en-dark.png">
-  <img src="docs/images/readme/customize-en-light.png" alt="Style customization: download and extract, edit rules and assets, set an ID and version, import and try; or create a pack from the format." width="1440">
-</picture>
+Built-in styles are ready to use. To customize them:
 
-Download a pack, edit its rules, palette, typography, motion, and declared assets, then import it. Or follow the format to create a pack from scratch. The originals are already bundled; importing them again is optional.
+1. Download an individual pack or collection from the [style-pack release](https://github.com/makesynt/seqvio-studio/releases/tag/style-packs-v1). Extract collections first to get the individual pack ZIPs.
+2. Extract a pack and edit its rules, palette, typography, motion, or assets. You can also follow the format to build your own pack.
+3. Set the ID and version as described in the [style-pack guide](docs/STYLE-PACKS.md), repackage, and import through Custom → Import style package (自定义 → 导入风格包).
 
-Extract collections before importing individual packs. See the [style-pack guide](docs/STYLE-PACKS.md) for the complete format, assets, and version rules.
+## Data and privacy
 
-## Useful details before you begin
-
-<details>
-<summary>How do content revisions and project recovery work?</summary>
-
-Describe the changes in the project conversation so the agent can revise the relevant scenes, visuals, or narration. Review the affected content and keyframes again, then confirm, regenerate, and check the video preview. Element editing and manual editing entry points are currently hidden in the interface. Cancellation or interruption preserves checkpoints and valid outputs; reopen the project to continue from saved progress. See the [user guide](docs/USAGE.en.md) for the full workflow.
-
-</details>
-
-<details>
-<summary>Where is my data stored, and what goes to a model?</summary>
-
-Projects and outputs are stored locally. References, prompts, style reference images, and review keyframes may be sent to your selected model. Online speech sends narration to the selected service and may incur charges. Supply only material intended for these services. Back up project directories and related assets together.
-
-</details>
-
-<details>
-<summary>What are the subtitle, GPU, and offline limits?</summary>
-
-Subtitle/phrase timing is estimated, not word-level forced alignment. SRT subtitles are exported separately, not automatically burned into the picture. GPU use depends on hardware, drivers, the task, and measured speed; initial probes add overhead, and CPU may be the better choice. Cache full samples and optional fonts before using them offline.
-
-</details>
+Projects and outputs stay on your device. References, prompts, and review images may be sent to your selected model; online speech sends narration to its provider. Back up project directories and their assets together.
 
 ## Licenses and feedback
 
-FFmpeg/ffprobe are bundled as separate tools under GPL-3.0-or-later. The in-app third-party licenses/source window (第三方许可与源码) provides their local notices and matching source links. Follow bundled notices for other components. Use the selected application release notes for corresponding source and build records.
+FFmpeg/ffprobe are bundled under GPL-3.0-or-later. Find their licenses and corresponding source links under Settings → About & diagnostics → Third-party licenses and source (第三方许可与源码), and in the application release notes. Other components follow their bundled licenses.
 
-Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues), including the app version, OS, engine/model, and reproduction steps. Remove credentials and private material before posting.
+Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues) with the app version, OS, and reproduction steps. Remove credentials and private material.
 
 ## References and acknowledgements
 
@@ -181,4 +118,3 @@ Parts of the art-style and animation implementation draw inspiration from the de
 </details>
 
 Fonts, assets, and third-party components retain their own licenses. These acknowledgements do not replace the notices distributed with each release.
-
