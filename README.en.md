@@ -1,102 +1,134 @@
-<img src="docs/images/seqvio-mark.svg" width="64" alt="Seqvio Studio logo">
+<h1 align="center">Seqvio Studio</h1>
 
-# Seqvio Studio
+<p align="center"><strong>Make long-form video creation simpler.</strong><br>Turn a topic and references into videos you can review and revise.</p>
 
-**Make long-form video creation simpler.**
+<p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>Download</strong></a> · <a href="docs/USAGE.en.md">User guide</a> · <a href="docs/STYLE-PACKS.md">Style packs & customization</a> · <a href="README.md">简体中文</a></p>
 
-[简体中文](README.md) · English
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme-hero-dark.svg">
+  <img src="docs/images/readme-hero-light.svg" alt="Seqvio Studio — from an idea to the final frame; a workflow illustration" width="1200">
+</picture>
 
-[Download](https://github.com/makesynt/seqvio-studio/releases) · [User guide](docs/USAGE.en.md) · [Style packs](docs/STYLE-PACKS.md) · [Style samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
 
-Seqvio Studio is a local desktop workspace for creating videos. Start with a topic, reference material, or a complete script. Connect your own OpenCode, Codex, or Antigravity installation, then work through an outline, scenes and narration, visual authoring, keyframe review, voiceover, and video export.
+Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode, Codex, or Antigravity. Let the agent author visuals and animation, review the outline, scenes, and keyframes, then use Seqvio for narration timing, quality checks, and rendering.
 
-The agent writes visuals and animation using the selected style. The Seqvio engine compiles scenes, maps visuals to voiceover timing, checks quality, and renders the result. Review and approve the important stages, revise individual scenes, and reuse outputs that remain valid.
+> **Before you begin:** prepare a working local agent CLI and model access. The installer includes the rendering runtime and media tools, not model accounts, subscriptions, or quota.
 
-![The Seqvio Studio style library, shown in the Chinese interface](docs/images/style-library.png)
+## Keep control from first idea to final video
 
-## Features
+| Content and visual language | Production and revision |
+| --- | --- |
+| **Start with your material**<br>Use a topic, script, links, or local references. Establish the structure before scenes and narration. | **Review before production**<br>Inspect keyframes and quality findings, then approve the current content and output settings. |
+| **41 built-in styles**<br>Diagrams, whiteboards, kinetic type, collage, and artistic looks, plus custom style packages. | **Change one scene, reuse the rest**<br>Keep valid cached outputs and resume from checkpoints after cancellation or interruption. |
+| **Code-driven visuals**<br>Combine text, images, SVG, Canvas, and Three.js into revisable scenes. | **Local rendering and editing**<br>Edit supported elements, trim clips, mix audio and overlays. Use suitable GPU codecs with CPU fallback. |
 
-- **Reference material to video**: begin with a topic, pasted script, links, or local files; review the outline before approving scenes and narration.
-- **41 built-in styles**: technical diagrams, whiteboards, handwritten notes, blackboards, flat explainers, kinetic type, collage, and more. Import/export style Skill packages, or extract a reusable style from a completed video.
-- **Code-driven visuals and animation**: combine text, images, DOM, SVG, Canvas, and Three.js. Render 3D scenes locally without requiring a generative video model for frame rendering.
-- **Voiceover and subtitles**: use Windows system speech locally, configure services such as MiniMax or self-hosted CosyVoice, or choose no voiceover. Export MP4 and separate SRT/VTT subtitles.
-- **Review and recovery**: inspect keyframes and quality findings before production; keep checkpoints after cancellation or interruption, and rebuild only affected outputs.
-- **Element and timeline editing**: edit supported text, images, SVG, 2D layers, and animation. Trim, split, reorder, and mix clips with music, sound effects, text, and image overlays.
-- **Local rendering and adaptive GPU use**: reuse Electron's Chromium by default. Select an available hardware codec when suitable and faster, with CPU fallback on failure. An optional Chrome backend is available for compatibility.
+## Choose your visual language
+
+| Explain complex ideas | Find your visual language |
+| :---: | :---: |
+| [![ Technical diagrams ](docs/images/styles/tech.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4)<br>**Technical diagrams** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4) | [![ Hand-drawn blackboard ](docs/images/styles/blackboard.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4)<br>**Hand-drawn blackboard** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4) |
+| [![ Memphis motion ](docs/images/styles/memphis.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4)<br>**Memphis motion** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4) | [![ Monet-inspired color ](docs/images/styles/monet.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4)<br>**Monet-inspired color** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4) |
+
+
+Samples illustrate a visual direction. Actual work depends on your topic, references, selected model, and review. [Browse all samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [Download style packs](docs/STYLE-PACKS.md)
+
+<details>
+<summary>See the actual app: style library</summary>
+
+![The actual Seqvio Studio style library, shown in Chinese](docs/images/style-library.png)
+
+</details>
+
+## Start in three steps
+
+1. **Connect and choose a style.** Install/authenticate one supported CLI. Select an available model under engine settings (引擎与连接). Supply the topic, audience, target duration, and references, then choose a visual style.
+2. **Review and approve.** Check the outline, scenes and narration, and static keyframes. Choose landscape/portrait and 720p/1080p, then approve the current version.
+3. **Produce and export.** Choose Windows system speech, a configured voice service, or no voiceover. Produce and preview the result, then export MP4 and separate SRT/VTT subtitles.
+
+Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
 
 ## Download and install
 
-Installers are published in [GitHub Releases](https://github.com/makesynt/seqvio-studio/releases). Select a **Seqvio Studio application release**, rather than a sample-video, style-pack, or FFmpeg source release. Test builds are marked **Pre-release**.
+| Platform | Public distribution status |
+| --- | --- |
+| Windows x64 | Installer preview available. Check each release for signing status, known issues, and validation scope. |
+| macOS / Linux | No validated installers are published. Windows results do not establish support on other platforms. |
 
-1. Read the selected application's release notes for operating systems, CPU architectures, signing status, and known issues.
-2. Under **Assets**, download the installer matching your device and **SHA256SUMS.txt** from the same release. That page is the source of truth for filenames, versions, sizes, and checksums.
-3. For Windows, run the command below in your download directory, compare each filename/hash with the checksum list, then run the installer.
-4. Launch **Seqvio Studio** and configure a creation engine as described below. Follow the relevant release notes for other platforms.
+1. Open [Releases](https://github.com/makesynt/seqvio-studio/releases) and select a **Seqvio Studio application release**. Samples, style packs, and FFmpeg source share the release list, so check what you are downloading.
+2. Download the matching installer and **SHA256SUMS.txt** from that release's **Assets**. Verify before installing; filenames, versions, sizes, and checksums live on the release page.
+3. Launch the app and configure an agent. Seqvio itself needs no separate Node.js, Python, or FFmpeg installation; follow the chosen CLI's own setup requirements.
+
+<details>
+<summary>Windows checksum command and unsigned builds</summary>
+
+Run in the download directory:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-Unsigned builds may trigger an unknown-publisher or SmartScreen warning, and device policies may block execution. Verify the source and checksum before proceeding through options permitted by your system. See [installation and troubleshooting](docs/USAGE.en.md#installation-and-first-launch).
+Match each filename/hash with the same release's checksum list. Unsigned builds may trigger unknown-publisher, SmartScreen, or device-policy blocks. Verify the source and use only options permitted by your system.
 
-GitHub's automatically generated **Source code (zip/tar.gz)** downloads are distribution-repository snapshots, not installers. This repository hosts documentation, releases, samples, and third-party build material. It does not contain the complete desktop application development project; cloning it and running `npm install` will not launch the app.
+</details>
 
-## What is included?
+This is a documentation and distribution repository, not the complete application development project. GitHub-generated **Source code ZIP/TAR** files are repository snapshots, not installers.
 
-| Component | Delivery |
+## Bundled or prepared on demand?
+
+| Included in the Windows installer | Downloaded or configured separately |
 | --- | --- |
-| Desktop app, Electron, and the default Chromium rendering backend | Included in the installer |
-| FFmpeg and ffprobe | Included in the Windows installer; available offline |
-| 41 styles, covers, and silent short preview loops | Included in the installer |
-| Inter and Noto Sans SC UI fonts; Virgil and Long Cang default whiteboard fonts | Included; available offline |
-| Full style sample videos | Downloaded from this repository's GitHub Releases on first preview, verified, and cached |
-| Xiaolai, Yozai, LXGW WenKai Lite, Liu Jian Mao Cao, and Zhi Mang Xing fonts | Downloaded and cached when first used |
-| Optional Chrome compatibility backend | Prepared on demand; the default renderer does not require a separate Chrome installation |
-| OpenCode / Codex / Antigravity CLI, model account, and quota | Install and configure your own; one working engine is sufficient |
-| Cloud voiceover or a self-hosted CosyVoice service | Supply your own service and credentials; Windows system speech needs no cloud service |
+| Electron/default Chromium renderer; FFmpeg and ffprobe. | Full sample videos, five optional whiteboard fonts, and the optional Chrome backend: downloaded, verified, and cached as needed. |
+| Built-in styles, covers, silent loops, and Inter, Noto Sans SC, Virgil, and Long Cang fonts. | OpenCode / Codex / Antigravity CLI and model access. Choose one engine and supply your own authentication/configuration. |
+| Windows system speech uses voices installed on your PC; no voiceover is also an option. | Online speech such as MiniMax needs credentials/quota; self-hosted CosyVoice needs a reachable service. |
 
-The bundled media tools include x265, Windows hardware codecs, and multiple audio libraries. **The export interface still defaults to H.264/AAC MP4**; including x265 does not add an H.265 export option. GPU selection depends on hardware, drivers, and measured speed. Initial capability probing adds overhead.
+Completed caches can be reused offline, and the default renderer needs no separate Chrome download. **Local rendering is not offline AI:** model calls, image review, or cloud speech may still need network access. Default export is H.264/AAC MP4; bundled x265 does not add an H.265 export control.
 
-### Style pack downloads and customization
+## Style pack downloads and customization
 
-Download an existing pack from the [catalog and format guide](docs/STYLE-PACKS.md), extract it, customize its rules, palette, typography, motion, and declared assets, then import your own style. You can also follow the package format to create a style from scratch. The originals are bundled with the app, so importing them again is unnecessary for normal use.
+Download a pack, edit its rules, palette, typography, motion, and declared assets, then import it. Or follow the format to create a pack from scratch. The originals are already bundled; importing them again is optional.
 
-Use your own ID and name, or increase the version whenever you change an existing package's content. ZIP one package and import it through Custom → Import style package (自定义 → 导入风格包). Extract collections before importing their individual ZIPs. The guide covers required files, configuration, assets, and version conflicts.
+**Extract → customize → choose your own ID/name or increase the version → import and try it.** Extract collections before importing individual packs. See the [style-pack guide](docs/STYLE-PACKS.md) for the complete format, assets, and version rules.
 
-## Create your first video
+## Useful details before you begin
 
-1. **Connect an engine.** Install and authenticate a supported CLI on your computer. Open **Settings → Engines & connections** (引擎与连接), choose an engine and an available model, then check the connection. A successful check only confirms that the CLI starts; model access and quota are still required.
-2. **Describe the video.** Enter the topic, audience, target duration, and key points on the home page. Attach reference material, select a visual style, and start creation.
-3. **Approve the outline.** Review the central argument, section structure, and time budget. Request changes in the conversation before confirming.
-4. **Review scenes and narration.** Check each scene's voiceover, visual intent, and steps. Choose a voice or no voiceover under style and voice settings (风格与配音).
-5. **Review keyframes.** Generate static previews, choose landscape/portrait and 720p/1080p, inspect the updated frames and quality findings, then approve the current output.
-6. **Produce and export.** Generate voiceover and scene videos, preview the assembled result, and export the MP4 and any required subtitle files.
-7. **Revise.** Change one scene in the workspace or use element editing (元素编辑) and timeline editing (时间线剪辑). Review affected visuals again and produce the updated version.
+<details>
+<summary>How do editing, trimming, and recovery work?</summary>
 
-Start with a 30–60 second project to learn the workflow. See the [English user guide](docs/USAGE.en.md) for a sample brief, voice configuration, editing, caching, and recovery.
+Revise a scene through conversation or use element/timeline editing, then review affected visuals again. Generate an actual edit preview to check overlays and mixing; the editor is not a full real-time compositor. Cancellation/interruption preserves checkpoints and valid outputs. See the [user guide](docs/USAGE.en.md) for supported operations and limits.
 
-## Offline use and data
+</details>
 
-Downloaded samples and optional fonts can be reused offline. Bundled fonts, media tools, and local rendering of already-prepared scenes and assets do not need an internet connection. Sample downloads support verification, resume, and retries. Remove an individual sample in its preview, or clear sample caches under **Settings → Storage**.
+<details>
+<summary>Where is my data stored, and what goes to a model?</summary>
 
-Local rendering does not make model inference offline. AI creation uses the model service configured through your selected CLI; cloud voiceover also needs network access. Reference material, prompts, style reference images, and review keyframes may be passed to the selected model as task inputs. Narration is sent to your selected online voice service. Choose services according to your data and cost requirements. Projects and outputs are stored locally; include project files and related assets in backups.
+Projects and outputs are stored locally. References, prompts, style reference images, and review keyframes may be sent to your selected model. Online speech sends narration to the selected service and may incur charges. Supply only material intended for these services. Back up project directories and related assets together.
 
-## Licenses, source, and feedback
+</details>
 
-Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for local notices and source links. FFmpeg/ffprobe are distributed as separate tools under GPL-3.0-or-later. Use the selected application release notes and in-app links for the matching source, dependencies, build scripts, and records, or browse [this repository's releases](https://github.com/makesynt/seqvio-studio/releases). Other third-party components retain their respective licenses.
+<details>
+<summary>What are the subtitle, GPU, and offline limits?</summary>
 
-Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues), including the app version, OS, engine, and reproduction steps. Remove credentials and private material before posting. Consult each release's notes for its validation scope, known issues, and supported platforms.
+Subtitle/phrase timing is estimated, not word-level forced alignment. SRT/VTT are separate files, not automatically burned-in captions. GPU use depends on hardware, drivers, the task, and measured speed; initial probes add overhead, and CPU may be the better choice. Cache full samples and optional fonts before using them offline.
 
-## Referenced projects and acknowledgements
+</details>
 
-Thanks to these open-source projects and their contributors for the engine, style references, runtime, and supporting capabilities used by Seqvio Studio:
+## Licenses and feedback
 
-| Project | Role in this project |
+FFmpeg/ffprobe are bundled as separate tools under GPL-3.0-or-later. The in-app third-party licenses/source window (第三方许可与源码) provides their local notices and matching source links. Follow bundled notices for other components. Use the selected application release notes for corresponding source and build records.
+
+Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues), including the app version, OS, engine/model, and reproduction steps. Remove credentials and private material before posting.
+
+## References and acknowledgements
+
+Thanks to [Seqvio](https://github.com/makesynt/seqvio) for scene contracts, timing, quality checks, and rendering, and to [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) (alchaincyf / 花叔·花生) for art-style recipes and animation grammar references.
+
+<details>
+<summary>More open-source projects and their roles</summary>
+
+| Project | Role |
 | --- | --- |
-| [Seqvio](https://github.com/makesynt/seqvio) | Scene contracts, narration timing, quality checks, and rendering. |
-| [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) | Art-style recipes, animation grammar, and visual references; thanks to alchaincyf / 花叔·花生. |
 | [Electron](https://github.com/electron/electron) / [Chromium](https://www.chromium.org/) | Desktop runtime and browser rendering foundation. |
-| [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | UI, authored scenes, and local 3D visuals. |
+| [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | Authored scene components and local 3D visuals. |
 | [Rough.js](https://github.com/rough-stuff/rough) | Sketch-style strokes and whiteboard drawing. |
 | [Excalidraw](https://github.com/excalidraw/excalidraw) | Whiteboard visual references and the Virgil font; the full Excalidraw editor is not embedded. |
 | [FFmpeg](https://ffmpeg.org/) | Media probing, audio/video codecs, mixing, and assembly. |
@@ -106,4 +138,7 @@ Thanks to these open-source projects and their contributors for the engine, styl
 | [OpenCode](https://github.com/anomalyco/opencode) / [Codex CLI](https://github.com/openai/codex) | Optional local creation-agent integrations; install and configure them separately. |
 | [Inter](https://github.com/rsms/inter) / [Noto fonts](https://github.com/notofonts) | UI and multilingual typography. |
 
-This highlights major projects rather than providing an exhaustive dependency or license inventory. Style assets, fonts, and other third-party material retain their respective licenses; see the notices distributed with the relevant release.
+</details>
+
+Fonts, assets, and third-party components retain their own licenses. These acknowledgements do not replace the notices distributed with each release.
+

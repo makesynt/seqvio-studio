@@ -1,102 +1,134 @@
-<img src="docs/images/seqvio-mark.svg" width="64" alt="Seqvio Studio 标识">
+<h1 align="center">Seqvio Studio</h1>
 
-# Seqvio Studio
+<p align="center"><strong>长视频创作，化繁为简。</strong><br>把主题与资料，变成可审阅、可修改的视频。</p>
 
-**长视频创作，化繁为简。**
+<p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>下载安装</strong></a> · <a href="docs/USAGE.zh-CN.md">使用指南</a> · <a href="docs/STYLE-PACKS.md">风格包与自定义</a> · <a href="README.en.md">English</a></p>
 
-简体中文 · [English](README.en.md)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme-hero-dark.svg">
+  <img src="docs/images/readme-hero-light.svg" alt="Seqvio Studio — from an idea to the final frame; a workflow illustration" width="1200">
+</picture>
 
-[下载安装](https://github.com/makesynt/seqvio-studio/releases) · [完整使用指南](docs/USAGE.zh-CN.md) · [风格包下载](docs/STYLE-PACKS.md) · [风格样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1)
 
-Seqvio Studio 是一款本地桌面视频创作工作台。输入主题、资料或完整稿件，连接你自己的 OpenCode、Codex 或 Antigravity，逐步完成内容规划、分镜与旁白、画面编写、关键帧审阅、配音和视频导出。
+Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自己的 OpenCode、Codex 或 Antigravity，让 Agent 根据主题与风格编写画面和动画，在草案、分镜和关键帧阶段确认方向，再由 Seqvio 完成配音映射、质检与渲染。
 
-Agent 按所选风格编写画面和动画，Seqvio 引擎负责场景编译、配音时间映射、质检与渲染。你可以在关键阶段确认内容，制作后继续修改单个场景，并复用仍然有效的产物。
+> **开始前**：请准备一个可用的本机 Agent CLI 及模型权限。安装包包含渲染运行时和媒体工具，不包含模型账号、订阅或额度。
+
+## 从内容到成片，保留创作的控制权
+
+| 内容与风格 | 制作与修改 |
+| --- | --- |
+| **资料驱动的创作**<br>从主题、稿件、链接或本地资料开始，先确定结构，再规划分镜与旁白。 | **先看画面，再制作**<br>审阅关键帧和质检提醒，确认当前内容与输出规格。 |
+| **41 套内置视觉风格**<br>图解、白板、动态文字、拼贴与艺术表达；支持自定义风格包。 | **修改一镜，复用其余**<br>保留有效缓存，取消或中断后按检查点继续。 |
+| **代码驱动的画面**<br>组合文字、图片、SVG、Canvas 与 Three.js，形成可修改的视觉表达。 | **本地渲染与编辑**<br>元素编辑、片段裁剪、多轨音频与图层合成；适合时使用 GPU，并保留 CPU 回退。 |
+
+## 选择你的视觉语言
+
+| 解释复杂概念 | 换一种视觉表达 |
+| :---: | :---: |
+| [![ 技术图解 ](docs/images/styles/tech.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4)<br>**技术图解** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4) | [![ 手绘黑板 ](docs/images/styles/blackboard.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4)<br>**手绘黑板** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4) |
+| [![ 孟菲斯 ](docs/images/styles/memphis.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4)<br>**孟菲斯** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4) | [![ 莫奈光色 ](docs/images/styles/monet.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4)<br>**莫奈光色** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4) |
+
+
+样片展示风格方向，实际作品由主题、资料、所选模型与审阅修改共同决定。[浏览全部样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [下载风格包](docs/STYLE-PACKS.md)
+
+<details>
+<summary>查看应用实际界面：风格库</summary>
 
 ![Seqvio Studio 风格库实际界面](docs/images/style-library.png)
 
-## 主要功能
+</details>
 
-- **从资料到视频**：用主题、粘贴的稿件、链接或本地资料开始，先确认制作草案，再审阅分镜与旁白。
-- **41 套内置风格**：技术图解、手绘白板、手绘笔记、黑板、扁平科普、动态文字、拼贴等；支持导入和导出风格 Skill 包，也可从完成的视频提炼个人风格。
-- **代码驱动的画面与动画**：组合文字、图片、DOM、SVG、Canvas 和 Three.js，支持本地三维画面，不依赖生成式视频模型完成逐帧渲染。
-- **配音与字幕**：Windows 系统语音可本地使用；可配置 MiniMax、自托管 CosyVoice 等语音服务，也可不配音。导出 MP4 和独立 SRT/VTT 字幕。
-- **可审阅、可恢复的制作流程**：生成关键帧、检查画面，再确认制作；取消或中断后保留检查点，修改时增量制作。
-- **元素与时间线编辑**：调整受支持的文字、图片、SVG、二维图层和动画；剪辑工作台提供裁剪、分割、重排、配乐、音效、文字及图片覆盖图层。
-- **本地渲染与自适应 GPU**：默认复用 Electron 的 Chromium；适合时选择更快的可用 GPU 编解码路径，失败回退 CPU。可切换到 Chrome 兼容后端。
+## 三步开始第一次创作
+
+1. **连接与选风格** — 安装并登录一个受支持的 CLI，在“设置 → 引擎与连接”选择可用模型；输入主题、受众、目标时长和资料，选择视觉风格。
+2. **审阅与确认** — 依次检查制作草案、分镜与旁白、静态关键帧。选择横屏或竖屏、720p 或 1080p，完成当前版本确认。
+3. **制作与导出** — 选择 Windows 系统语音、已配置的语音服务或无配音，制作并预览成片，导出 MP4 与独立 SRT/VTT 字幕。
+
+建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
 
 ## 下载与安装
 
-安装包统一在 [GitHub Releases](https://github.com/makesynt/seqvio-studio/releases) 发布。请在列表中选择 **Seqvio Studio 应用版本**，不要将样片、风格包或 FFmpeg 源码发布当作安装包。测试版本会标记为 **Pre-release**。
+| 平台 | 公开发行状态 |
+| --- | --- |
+| Windows x64 | 已提供安装测试版；查看各版本的签名状态、已知问题与验证范围。 |
+| macOS / Linux | 尚未提供已验收的安装包；不将 Windows 验证结果视为其他平台已验证。 |
 
-1. 打开所选应用版本的发布页，阅读系统、CPU 架构、签名状态及已知问题。
-2. 在 **Assets** 中下载与设备匹配的安装包，以及同一发布页的 **SHA256SUMS.txt**。具体文件名、版本、大小和校验值以该发布页为准。
-3. 以下为 Windows 校验示例：在下载目录执行命令，将结果按文件名与校验清单核对，再运行安装程序。
-4. 完成安装后启动 **Seqvio Studio**，按下方步骤配置创作引擎。其他平台的安装方式以对应发行说明为准。
+1. 打开 [Releases](https://github.com/makesynt/seqvio-studio/releases)，选择 **Seqvio Studio 应用发行版**。同一列表也有风格包、样片和 FFmpeg 源码，下载时请区分。
+2. 从该版本 **Assets** 下载适合设备的安装包与 **SHA256SUMS.txt**，核对后安装。版本、大小和校验值均以该发布页为准。
+3. 启动应用并配置 Agent。Seqvio 安装版本身不需要另装 Node.js、Python 或 FFmpeg；所选 CLI 的安装要求以其官方说明为准。
+
+<details>
+<summary>Windows 校验命令与未签名版本说明</summary>
+
+在下载目录执行：
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ```
 
-未签名版本可能显示未知发布者或 SmartScreen 提示，部分设备策略会阻止运行。确认下载来源和校验结果后，使用系统允许的方式继续。详见[安装与常见问题](docs/USAGE.zh-CN.md#安装与首次启动)。
+按文件名与同一 Release 的校验清单核对。未签名版本可能触发未知发布者、SmartScreen 或设备策略拦截；确认来源后，仅使用系统允许的方式继续。
 
-GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照，不是安装包。本仓库提供产品文档、安装版本、样片和第三方构建资料；不包含完整桌面应用开发工程，不能通过克隆本仓库再执行 `npm install` 启动应用。
+</details>
 
-## 安装包包含什么
+本仓库用于产品文档与公开分发，不包含完整应用开发工程。GitHub 自动生成的 **Source code ZIP/TAR** 是仓库快照，不是安装包。
 
-| 项目 | 提供方式 |
+## 随包提供，还是按需准备？
+
+| 随 Windows 安装包提供 | 首次使用或由你准备 |
 | --- | --- |
-| 桌面应用、Electron 与默认 Chromium 渲染后端 | 随安装包提供 |
-| FFmpeg 与 ffprobe | 随 Windows 安装包提供，可离线使用 |
-| 41 套风格、封面与静音短循环预览 | 随安装包提供 |
-| 界面字体 Inter、Noto Sans SC；默认白板字体 Virgil、Long Cang | 随安装包提供，可离线使用 |
-| 完整风格样片 | 首次预览时从本仓库 GitHub Releases 下载，校验并缓存 |
-| 小赖、悠哉、霞鹜文楷轻便版、刘建毛草、志莽行 | 首次使用时下载并缓存 |
-| 可选 Chrome 兼容渲染后端 | 使用时按需准备，默认渲染无需单独安装 Chrome |
-| OpenCode / Codex / Antigravity CLI、模型账号与额度 | 用户自行安装并配置，任选一个可用引擎 |
-| 云端配音或自托管 CosyVoice | 用户自行准备服务及凭据；Windows 系统配音无需云服务 |
+| Electron 与默认 Chromium 渲染后端；FFmpeg / ffprobe。 | 完整风格样片、其他五款白板字体和可选 Chrome：按需下载、校验并缓存。 |
+| 内置风格、封面、静音短循环；Inter、Noto Sans SC、Virgil 和 Long Cang 字体。 | OpenCode / Codex / Antigravity CLI 及可用模型；任选一个引擎，自行完成登录与服务配置。 |
+| Windows 系统语音可使用本机已有音色；也可选择无配音。 | MiniMax 等在线配音需对应凭据与额度；自托管 CosyVoice 需可访问的服务。 |
 
-随包媒体工具包含 x265、Windows GPU 编解码及多种音频库。**当前导出界面仍以 H.264/AAC MP4 为默认输出**，包含 x265 不代表增加了 H.265 导出选项。GPU 是否启用取决于设备、驱动及实际速度，首次探测有额外开销。
+已缓存资源可离线复用；默认本地渲染无需另外下载 Chrome。**本地渲染不等于 AI 离线**：模型调用、审图或云端配音可能仍需网络。当前默认导出 H.264/AAC MP4；包含 x265 不等于界面提供 H.265 导出选项。
 
-### 风格包下载与自定义
+## 风格包下载与自定义
 
-从[风格包目录与格式说明](docs/STYLE-PACKS.md)下载现有风格包，即可解压修改规则、配色、排版、动效及声明的资源，再导入为自己的风格；也可参考包格式，从头制作个人风格包。安装版已内置原风格，无需为正常使用而重复导入。
+下载现有包，修改规则、配色、排版、动效和声明的资源后导入；也可参考格式从头制作自己的包。安装版已内置原风格，通常无需重复导入。
 
-自定义后使用自己的 ID 与名称；保留原 ID 时，每次修改内容都应增加版本号。将单个包压缩为 ZIP，在“自定义 → 导入风格包”导入。全量合集先解压，再逐个导入其中的风格 ZIP。目录说明包含必需文件、配置字段、资源声明和版本冲突处理。
+**解压 → 自定义 → 设置自己的 ID/名称或增加版本 → 导入并试做。** 全量合集须先解压，再逐个导入单包。完整格式、资源与版本规则见[风格包指南](docs/STYLE-PACKS.md)。
 
-## 第一次制作视频
+## 使用前值得了解
 
-1. **配置引擎**：先在本机安装并登录一个受支持的 CLI；打开 **设置 → 引擎与连接**，选择引擎和可用模型，执行“检测连接”。检测成功仅表示 CLI 可启动，还需确保模型可访问且有额度。
-2. **给出创作说明**：在首页输入主题、受众、目标时长和重点，添加需要的资料，选择视觉风格并开始创作。
-3. **确认制作草案**：检查核心观点、章节结构和时长预算，可通过会话修改后再确认。
-4. **审阅分镜与旁白**：逐镜检查旁白、画面意图和步骤；在“风格与配音”中选择声音或无配音。
-5. **审阅关键帧**：生成静态画面，选择横屏/竖屏、720p/1080p，检查更新后的预览及质检提醒，并完成整体确认。
-6. **制作与导出**：生成配音和场景视频，预览合成结果，再导出 MP4 与所需字幕文件。
-7. **继续修改**：在创作台修改单镜，或使用“元素编辑”“时间线剪辑”；重新检查受影响画面，制作更新版本。
+<details>
+<summary>如何修改、剪辑与恢复项目？</summary>
 
-第一次可用 30–60 秒的小项目熟悉流程。完整操作、示例创作说明、配音设置、缓存和恢复见[中文使用指南](docs/USAGE.zh-CN.md)。
+通过会话修改单镜，或使用“元素编辑”“时间线剪辑”，保存后重新审阅受影响画面。剪辑效果需生成实际预览检查，不是实时完整合成。取消或中断会保留检查点及有效产物；支持的编辑范围和限制见[使用指南](docs/USAGE.zh-CN.md)。
 
-## 离线使用与数据
+</details>
 
-下载完成的样片和可选字体可从缓存离线使用；随包字体、媒体工具以及已有素材的本地渲染无需联网。样片下载支持校验、断点续传和重试，可在预览中清理单个样片，或在 **设置 → 存储** 清理样片缓存。
+<details>
+<summary>资料存在哪里，哪些内容会交给模型？</summary>
 
-本地渲染不等于模型离线：AI 创作使用所选 CLI 配置的模型服务；云端配音也需要网络。创作资料、提示词、风格参考图及审图关键帧可能作为任务输入交给所选模型；旁白会交给所选在线配音服务。请按自己的数据和费用要求选择服务。项目与制作产物保存在本机，备份时应同时保留项目文件及相关素材。
+项目和产物保存在本机。创作资料、提示词、风格参考图和审图关键帧可能交给所选模型；在线配音将旁白交给对应服务，并可能计费。只提供准备交给这些服务处理的内容。备份时同时保留项目目录与素材。
 
-## 许可、源码与反馈
+</details>
 
-安装后的 **设置 → 关于与诊断 → 第三方许可与源码** 提供本地许可及源码入口。FFmpeg/ffprobe 以独立工具随包分发，许可为 GPL-3.0-or-later；对应源码、依赖和构建记录的入口以所选版本的发布说明及应用内链接为准，也可浏览[本仓库 Releases](https://github.com/makesynt/seqvio-studio/releases)。其他第三方组件遵循各自许可证。
+<details>
+<summary>字幕、GPU 和离线使用有哪些边界？</summary>
 
-反馈问题请使用 [Issues](https://github.com/makesynt/seqvio-studio/issues)，附应用版本、操作系统、所选引擎和复现步骤；提交前移除密钥和私人资料。各发行版本的验证范围、已知问题和平台支持以其发布说明为准。
+字幕与句内短语时间目前为估算，不是逐词强制对齐；SRT/VTT 为独立文件，不代表自动烧录。GPU 由设备、驱动、任务与实测速度决定，首次探测有额外开销，使用 CPU 可能是更合适的选择。完整样片和可选字体需先缓存才能离线使用。
+
+</details>
+
+## 许可与反馈
+
+FFmpeg/ffprobe 作为独立工具随包提供，许可为 GPL-3.0-or-later。应用内“设置 → 关于与诊断 → 第三方许可与源码”提供其本地许可与对应源码入口；其他组件按随包版权与许可说明使用。对应源码与构建资料以所选应用发行版的发布说明为准。
+
+遇到问题可提交 [Issue](https://github.com/makesynt/seqvio-studio/issues)，附应用版本、系统、引擎/模型和复现步骤，先移除密钥与私人资料。
 
 ## 参考项目与致谢
 
-感谢以下开源项目及其贡献者。它们为 Seqvio Studio 提供了引擎、风格参考、运行时及基础能力：
+感谢 [Seqvio](https://github.com/makesynt/seqvio) 提供场景、时序、质检与渲染基础，感谢 [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion)（alchaincyf / 花叔·花生）提供艺术风格配方与动画语法参考。
 
-| 项目 | 在本项目中的作用 |
+<details>
+<summary>更多开源项目与用途</summary>
+
+| 项目 | 用途 |
 | --- | --- |
-| [Seqvio](https://github.com/makesynt/seqvio) | 场景协议、旁白时间映射、质检与渲染引擎。 |
-| [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) | 艺术风格配方、动画语法及视觉表达参考；感谢 alchaincyf / 花叔·花生。 |
 | [Electron](https://github.com/electron/electron) / [Chromium](https://www.chromium.org/) | 桌面运行时及默认浏览器渲染基础。 |
-| [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | 界面、代码场景和本地三维画面。 |
+| [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | 代码场景组件与本地三维画面。 |
 | [Rough.js](https://github.com/rough-stuff/rough) | 手绘线条与白板绘图。 |
 | [Excalidraw](https://github.com/excalidraw/excalidraw) | 白板视觉与 Virgil 字体来源；并非嵌入完整 Excalidraw 编辑器。 |
 | [FFmpeg](https://ffmpeg.org/) | 媒体探测、音视频编解码、混音和合成。 |
@@ -106,4 +138,7 @@ GitHub 自动生成的 **Source code (zip/tar.gz)** 是本分发仓库的快照�
 | [OpenCode](https://github.com/anomalyco/opencode) / [Codex CLI](https://github.com/openai/codex) | 可选的本机创作 Agent 接入；需自行安装和配置。 |
 | [Inter](https://github.com/rsms/inter) / [Noto fonts](https://github.com/notofonts) | 界面与多语言排版字体。 |
 
-以上为主要项目致谢，不是完整依赖或许可清单；风格素材、字体和其他第三方内容遵循各自许可证，具体版权与许可见相应发行版随附说明。
+</details>
+
+字体、素材和第三方组件保留各自许可。以上致谢不替代随发行版提供的完整版权与许可说明。
+
