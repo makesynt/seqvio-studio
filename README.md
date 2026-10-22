@@ -5,8 +5,8 @@
 <p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>下载安装</strong></a> · <a href="docs/USAGE.zh-CN.md">使用指南</a> · <a href="docs/STYLE-PACKS.md">风格包与自定义</a> · <a href="README.en.md">English</a></p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme-hero-dark.svg">
-  <img src="docs/images/readme-hero-light.svg" alt="Seqvio Studio — from an idea to the final frame; a workflow illustration" width="1200">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/hero-dark.png">
+  <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — a designed collage of actual style-sample frames" width="1200">
 </picture>
 
 
@@ -16,11 +16,23 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
 
 ## 从内容到成片，保留创作的控制权
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/workflow-zh-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/workflow-zh-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/workflow-zh-dark.png">
+  <img src="docs/images/readme/workflow-zh-light.png" alt="创作流程：资料与风格 → Agent 创作 → 由你审阅确认 → 本地制作导出；修改后审阅受影响画面并复用有效产物。" width="1440">
+</picture>
+
+<details>
+<summary>查看流程与能力文字说明</summary>
+
 | 内容与风格 | 制作与修改 |
 | --- | --- |
 | **资料驱动的创作**<br>从主题、稿件、链接或本地资料开始，先确定结构，再规划分镜与旁白。 | **先看画面，再制作**<br>审阅关键帧和质检提醒，确认当前内容与输出规格。 |
 | **41 套内置视觉风格**<br>图解、白板、动态文字、拼贴与艺术表达；支持自定义风格包。 | **修改一镜，复用其余**<br>保留有效缓存，取消或中断后按检查点继续。 |
 | **代码驱动的画面**<br>组合文字、图片、SVG、Canvas 与 Three.js，形成可修改的视觉表达。 | **本地制作与导出**<br>完成场景渲染、配音与视频合成；适合时使用 GPU，并保留 CPU 回退。 |
+
+</details>
 
 ## 选择你的视觉语言
 
@@ -41,11 +53,23 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
 
 ## 三步开始第一次创作
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-zh-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/quickstart-zh-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-zh-dark.png">
+  <img src="docs/images/readme/quickstart-zh-light.png" alt="首次创作三步：连接 CLI、模型并选择风格；审阅草案、分镜与关键帧；确认后制作、预览并导出。" width="1440">
+</picture>
+
+建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
+
+<details>
+<summary>查看三步操作文字说明</summary>
+
 1. **连接与选风格** — 安装并登录一个受支持的 CLI，在“设置 → 引擎与连接”选择可用模型；输入主题、受众、目标时长和资料，选择视觉风格。
 2. **审阅与确认** — 依次检查制作草案、分镜与旁白、静态关键帧。选择横屏或竖屏、720p 或 1080p，完成当前版本确认。
 3. **制作与导出** — 选择 Windows 系统语音、已配置的语音服务或无配音，制作并预览成片，导出 MP4；成片有字幕时，可通过“更多项目操作 → 导出字幕 SRT”另存字幕。
 
-建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
+</details>
 
 ## 下载与安装
 
@@ -54,9 +78,21 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
 | Windows x64 | 已提供安装测试版；查看各版本的签名状态、已知问题与验证范围。 |
 | macOS / Linux | 尚未提供已验收的安装包；不将 Windows 验证结果视为其他平台已验证。 |
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/install-zh-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/install-zh-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/install-zh-dark.png">
+  <img src="docs/images/readme/install-zh-light.png" alt="安装流程：选择应用发行版 → 下载安装包与同一版本的校验文件 → 核对后安装并配置 Agent。" width="1440">
+</picture>
+
+<details>
+<summary>查看下载与安装文字说明</summary>
+
 1. 打开 [Releases](https://github.com/makesynt/seqvio-studio/releases)，选择 **Seqvio Studio 应用发行版**。同一列表也有风格包、样片和 FFmpeg 源码，下载时请区分。
 2. 从该版本 **Assets** 下载适合设备的安装包与 **SHA256SUMS.txt**，核对后安装。版本、大小和校验值均以该发布页为准。
 3. 启动应用并配置 Agent。Seqvio 安装版本身不需要另装 Node.js、Python 或 FFmpeg；所选 CLI 的安装要求以其官方说明为准。
+
+</details>
 
 <details>
 <summary>Windows 校验命令与未签名版本说明</summary>
@@ -85,9 +121,16 @@ Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 
 ## 风格包下载与自定义
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/customize-zh-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/customize-zh-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/customize-zh-dark.png">
+  <img src="docs/images/readme/customize-zh-light.png" alt="风格包自定义：下载并解压 → 修改规则、配色与资源 → 设置 ID 和版本 → 导入并试做；也可参考格式自建。" width="1440">
+</picture>
+
 下载现有包，修改规则、配色、排版、动效和声明的资源后导入；也可参考格式从头制作自己的包。安装版已内置原风格，通常无需重复导入。
 
-**解压 → 自定义 → 设置自己的 ID/名称或增加版本 → 导入并试做。** 全量合集须先解压，再逐个导入单包。完整格式、资源与版本规则见[风格包指南](docs/STYLE-PACKS.md)。
+全量合集须先解压，再逐个导入单包。完整格式、资源与版本规则见[风格包指南](docs/STYLE-PACKS.md)。
 
 ## 使用前值得了解
 

@@ -5,8 +5,8 @@
 <p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>Download</strong></a> · <a href="docs/USAGE.en.md">User guide</a> · <a href="docs/STYLE-PACKS.md">Style packs & customization</a> · <a href="README.md">简体中文</a></p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme-hero-dark.svg">
-  <img src="docs/images/readme-hero-light.svg" alt="Seqvio Studio — from an idea to the final frame; a workflow illustration" width="1200">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/hero-dark.png">
+  <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — a designed collage of actual style-sample frames" width="1200">
 </picture>
 
 
@@ -16,11 +16,23 @@ Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode
 
 ## Keep control from first idea to final video
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/workflow-en-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/workflow-en-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/workflow-en-dark.png">
+  <img src="docs/images/readme/workflow-en-light.png" alt="Creative workflow: material and style → agent creation → your review and approval → local production and export; review changes and reuse valid outputs." width="1440">
+</picture>
+
+<details>
+<summary>Text description of the workflow and capabilities</summary>
+
 | Content and visual language | Production and revision |
 | --- | --- |
 | **Start with your material**<br>Use a topic, script, links, or local references. Establish the structure before scenes and narration. | **Review before production**<br>Inspect keyframes and quality findings, then approve the current content and output settings. |
 | **41 built-in styles**<br>Diagrams, whiteboards, kinetic type, collage, and artistic looks, plus custom style packages. | **Change one scene, reuse the rest**<br>Keep valid cached outputs and resume from checkpoints after cancellation or interruption. |
 | **Code-driven visuals**<br>Combine text, images, SVG, Canvas, and Three.js into revisable scenes. | **Local production and export**<br>Render scenes, generate narration, and assemble videos. Use suitable GPU codecs with CPU fallback. |
+
+</details>
 
 ## Choose your visual language
 
@@ -41,11 +53,23 @@ Samples illustrate a visual direction. Actual work depends on your topic, refere
 
 ## Start in three steps
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-en-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/quickstart-en-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-en-dark.png">
+  <img src="docs/images/readme/quickstart-en-light.png" alt="First project: connect one agent CLI and model, choose a style; review the outline, scenes and keyframes; approve, produce, preview and export." width="1440">
+</picture>
+
+Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
+
+<details>
+<summary>Text walkthrough of the three steps</summary>
+
 1. **Connect and choose a style.** Install/authenticate one supported CLI. Select an available model under engine settings (引擎与连接). Supply the topic, audience, target duration, and references, then choose a visual style.
 2. **Review and approve.** Check the outline, scenes and narration, and static keyframes. Choose landscape/portrait and 720p/1080p, then approve the current version.
 3. **Produce and export.** Choose Windows system speech, a configured voice service, or no voiceover. Produce and preview the result, then export MP4. If the result has subtitles, save them via More project actions → Export subtitles SRT (更多项目操作 → 导出字幕 SRT).
 
-Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
+</details>
 
 ## Download and install
 
@@ -54,9 +78,21 @@ Try a 30–60 second project first. A connection check only confirms that the CL
 | Windows x64 | Installer preview available. Check each release for signing status, known issues, and validation scope. |
 | macOS / Linux | No validated installers are published. Windows results do not establish support on other platforms. |
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/install-en-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/install-en-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/install-en-dark.png">
+  <img src="docs/images/readme/install-en-light.png" alt="Install: choose the application release, download the installer and matching checksums, verify, install and configure an agent." width="1440">
+</picture>
+
+<details>
+<summary>Text instructions for download and installation</summary>
+
 1. Open [Releases](https://github.com/makesynt/seqvio-studio/releases) and select a **Seqvio Studio application release**. Samples, style packs, and FFmpeg source share the release list, so check what you are downloading.
 2. Download the matching installer and **SHA256SUMS.txt** from that release's **Assets**. Verify before installing; filenames, versions, sizes, and checksums live on the release page.
 3. Launch the app and configure an agent. Seqvio itself needs no separate Node.js, Python, or FFmpeg installation; follow the chosen CLI's own setup requirements.
+
+</details>
 
 <details>
 <summary>Windows checksum command and unsigned builds</summary>
@@ -85,9 +121,16 @@ Completed caches can be reused offline, and the default renderer needs no separa
 
 ## Style pack downloads and customization
 
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/customize-en-dark-mobile.png">
+  <source media="(max-width: 600px)" srcset="docs/images/readme/customize-en-light-mobile.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/customize-en-dark.png">
+  <img src="docs/images/readme/customize-en-light.png" alt="Style customization: download and extract, edit rules and assets, set an ID and version, import and try; or create a pack from the format." width="1440">
+</picture>
+
 Download a pack, edit its rules, palette, typography, motion, and declared assets, then import it. Or follow the format to create a pack from scratch. The originals are already bundled; importing them again is optional.
 
-**Extract → customize → choose your own ID/name or increase the version → import and try it.** Extract collections before importing individual packs. See the [style-pack guide](docs/STYLE-PACKS.md) for the complete format, assets, and version rules.
+Extract collections before importing individual packs. See the [style-pack guide](docs/STYLE-PACKS.md) for the complete format, assets, and version rules.
 
 ## Useful details before you begin
 
