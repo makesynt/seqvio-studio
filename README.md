@@ -20,7 +20,7 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
 | --- | --- |
 | **资料驱动的创作**<br>从主题、稿件、链接或本地资料开始，先确定结构，再规划分镜与旁白。 | **先看画面，再制作**<br>审阅关键帧和质检提醒，确认当前内容与输出规格。 |
 | **41 套内置视觉风格**<br>图解、白板、动态文字、拼贴与艺术表达；支持自定义风格包。 | **修改一镜，复用其余**<br>保留有效缓存，取消或中断后按检查点继续。 |
-| **代码驱动的画面**<br>组合文字、图片、SVG、Canvas 与 Three.js，形成可修改的视觉表达。 | **本地渲染与编辑**<br>元素编辑、片段裁剪、多轨音频与图层合成；适合时使用 GPU，并保留 CPU 回退。 |
+| **代码驱动的画面**<br>组合文字、图片、SVG、Canvas 与 Three.js，形成可修改的视觉表达。 | **本地制作与导出**<br>完成场景渲染、配音与视频合成；适合时使用 GPU，并保留 CPU 回退。 |
 
 ## 选择你的视觉语言
 
@@ -92,9 +92,9 @@ Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 ## 使用前值得了解
 
 <details>
-<summary>如何修改、剪辑与恢复项目？</summary>
+<summary>如何修改内容与恢复项目？</summary>
 
-通过会话修改单镜，或使用“元素编辑”“时间线剪辑”，保存后重新审阅受影响画面。剪辑效果需生成实际预览检查，不是实时完整合成。取消或中断会保留检查点及有效产物；支持的编辑范围和限制见[使用指南](docs/USAGE.zh-CN.md)。
+通过项目会话说明要修改的内容，由 Agent 调整相关分镜、画面或旁白。修改后重新审阅受影响的内容与关键帧，确认后重新制作并检查视频预览。当前界面已隐藏元素编辑与手动编辑入口。取消或中断会保留检查点及有效产物；重新打开项目后，可基于已保存的进度继续制作。更多流程见[使用指南](docs/USAGE.zh-CN.md)。
 
 </details>
 
@@ -120,7 +120,9 @@ FFmpeg/ffprobe 作为独立工具随包提供，许可为 GPL-3.0-or-later。应
 
 ## 参考项目与致谢
 
-感谢 [Seqvio](https://github.com/makesynt/seqvio) 提供场景、时序、质检与渲染基础，感谢 [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion)（alchaincyf / 花叔·花生）提供艺术风格配方与动画语法参考。
+Seqvio Studio 的场景、时序、质检与渲染能力基于同样由本项目作者维护的 [Seqvio](https://github.com/makesynt/seqvio)。
+
+艺术风格与动画相关实现参考借鉴了 [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion)（alchaincyf / 花叔·花生）的部分设计与实现，感谢作者的开源分享。
 
 <details>
 <summary>更多开源项目与用途</summary>

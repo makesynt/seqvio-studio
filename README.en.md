@@ -20,7 +20,7 @@ Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode
 | --- | --- |
 | **Start with your material**<br>Use a topic, script, links, or local references. Establish the structure before scenes and narration. | **Review before production**<br>Inspect keyframes and quality findings, then approve the current content and output settings. |
 | **41 built-in styles**<br>Diagrams, whiteboards, kinetic type, collage, and artistic looks, plus custom style packages. | **Change one scene, reuse the rest**<br>Keep valid cached outputs and resume from checkpoints after cancellation or interruption. |
-| **Code-driven visuals**<br>Combine text, images, SVG, Canvas, and Three.js into revisable scenes. | **Local rendering and editing**<br>Edit supported elements, trim clips, mix audio and overlays. Use suitable GPU codecs with CPU fallback. |
+| **Code-driven visuals**<br>Combine text, images, SVG, Canvas, and Three.js into revisable scenes. | **Local production and export**<br>Render scenes, generate narration, and assemble videos. Use suitable GPU codecs with CPU fallback. |
 
 ## Choose your visual language
 
@@ -92,9 +92,9 @@ Download a pack, edit its rules, palette, typography, motion, and declared asset
 ## Useful details before you begin
 
 <details>
-<summary>How do editing, trimming, and recovery work?</summary>
+<summary>How do content revisions and project recovery work?</summary>
 
-Revise a scene through conversation or use element/timeline editing, then review affected visuals again. Generate an actual edit preview to check overlays and mixing; the editor is not a full real-time compositor. Cancellation/interruption preserves checkpoints and valid outputs. See the [user guide](docs/USAGE.en.md) for supported operations and limits.
+Describe the changes in the project conversation so the agent can revise the relevant scenes, visuals, or narration. Review the affected content and keyframes again, then confirm, regenerate, and check the video preview. Element editing and manual editing entry points are currently hidden in the interface. Cancellation or interruption preserves checkpoints and valid outputs; reopen the project to continue from saved progress. See the [user guide](docs/USAGE.en.md) for the full workflow.
 
 </details>
 
@@ -120,7 +120,9 @@ Report problems in [Issues](https://github.com/makesynt/seqvio-studio/issues), i
 
 ## References and acknowledgements
 
-Thanks to [Seqvio](https://github.com/makesynt/seqvio) for scene contracts, timing, quality checks, and rendering, and to [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) (alchaincyf / 花叔·花生) for art-style recipes and animation grammar references.
+Seqvio Studio builds on [Seqvio](https://github.com/makesynt/seqvio), maintained by the same author, for scene composition, timing, quality checks, and rendering.
+
+Parts of the art-style and animation implementation draw inspiration from the design and implementation of [huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) by alchaincyf (花叔·花生). Thanks to the author for sharing their work as open source.
 
 <details>
 <summary>More open-source projects and their roles</summary>
