@@ -1,6 +1,6 @@
 <h1 align="center">Seqvio Studio</h1>
 
-<p align="center"><strong>长视频创作，化繁为简。</strong><br>把主题与资料，变成可审阅、可修改的视频。</p>
+<p align="center"><strong>长视频创作，化繁为简。</strong></p>
 
 <p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>下载安装</strong></a> · <a href="docs/USAGE.zh-CN.md">使用指南</a> · <a href="docs/STYLE-PACKS.md">风格包与自定义</a> · <a href="README.en.md">English</a></p>
 
@@ -43,7 +43,7 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
 
 1. **连接与选风格** — 安装并登录一个受支持的 CLI，在“设置 → 引擎与连接”选择可用模型；输入主题、受众、目标时长和资料，选择视觉风格。
 2. **审阅与确认** — 依次检查制作草案、分镜与旁白、静态关键帧。选择横屏或竖屏、720p 或 1080p，完成当前版本确认。
-3. **制作与导出** — 选择 Windows 系统语音、已配置的语音服务或无配音，制作并预览成片，导出 MP4 与独立 SRT/VTT 字幕。
+3. **制作与导出** — 选择 Windows 系统语音、已配置的语音服务或无配音，制作并预览成片，导出 MP4；成片有字幕时，可通过“更多项目操作 → 导出字幕 SRT”另存字幕。
 
 建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
 
@@ -108,7 +108,7 @@ Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 <details>
 <summary>字幕、GPU 和离线使用有哪些边界？</summary>
 
-字幕与句内短语时间目前为估算，不是逐词强制对齐；SRT/VTT 为独立文件，不代表自动烧录。GPU 由设备、驱动、任务与实测速度决定，首次探测有额外开销，使用 CPU 可能是更合适的选择。完整样片和可选字体需先缓存才能离线使用。
+字幕与句内短语时间目前为估算，不是逐词强制对齐；SRT 字幕单独导出，不代表自动烧录。GPU 由设备、驱动、任务与实测速度决定，首次探测有额外开销，使用 CPU 可能是更合适的选择。完整样片和可选字体需先缓存才能离线使用。
 
 </details>
 

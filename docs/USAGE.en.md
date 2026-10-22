@@ -48,7 +48,7 @@ Use the selected style to start creation. Import personal styles as supported Sk
 
 ### Voiceover
 
-Choose a method in the project's style and voice settings (风格与配音):
+Open Project settings (项目设置) at the top right of the workspace and choose a method under Narration (旁白配音). Settings → Voice services (配音服务) configures defaults for new projects:
 
 | Method | Suitable for | Preparation |
 | --- | --- | --- |
@@ -90,16 +90,17 @@ Read quality findings and approve the current project state. Reviewing one scene
 
 Continue with voiceover and scene rendering. Wait for assembly, play the result, and check audio, pacing, subtitles, and the ending before exporting.
 
-The current default output is **H.264/AAC MP4 at 24 fps**. Export **SRT/VTT** subtitles separately as needed; separate subtitles are not automatically burned into the picture. Bundled x265 capability does not add an H.265 export control to the current interface.
+The current default output is **H.264/AAC MP4 at 24 fps**. Use Export video (导出视频) at the top right to save it. If the result has subtitles, use More project actions → Export subtitles SRT (更多项目操作 → 导出字幕 SRT) to save a separate **SRT** file. Preview playback may use a VTT subtitle track, but the current interface has no separate VTT export action. Separate subtitles are not automatically burned into the picture. Bundled x265 capability does not add an H.265 export control to the current interface.
 
-## Revise an existing video
+## Revise content and restore versions
 
-- **Natural-language changes**: request a change to a scene in the workspace, review updated content/keyframes, then produce the revision. Valid unchanged outputs are reused.
-- **Element editing** (元素编辑): select a generated code scene and edit supported text, images, SVG, position, size, color, layers, visibility timing, and 2D animation. Save and review affected visuals again.
-- **Timeline editing** (时间线剪辑): trim, split, and reorder video/image clips; add music, sound effects, text/image overlays; adjust volume and fades. Music can duck under narration.
-- **Check the actual edit**: save the edit and generate an edit preview (预览剪辑) before producing the final cut (生成成片). The source-clip player does not show all overlays and mixing effects in real time.
+1. **Request changes in the conversation**: identify the scene, visuals, or narration to change in the workspace conversation so the agent can revise the relevant content.
+2. **Edit narration directly**: the narration list still provides a pencil button for each scene. Select a scene, click the button, revise the text, and save. You can also use the application menu Edit → View / Edit script (编辑 → 查看 / 编辑脚本).
+3. **Review and produce the update**: follow Review changes (审阅修改) or the relevant review action, inspect updated content and keyframes, then confirm and continue production. Valid unchanged outputs are reused. Narration changes may also affect the voiceover, scene duration, and subtitles.
+4. **Check the updated result**: if the preview is marked as the previous version (当前预览为上一版), you are still watching the old result. Finish producing the update, check its visuals, audio, and pacing, then export again.
+5. **Restore an existing version**: open More project actions (更多项目操作, the top-right ellipsis) → Version history (版本历史). The dialog is titled 方案历史; select an existing record and confirm restoration. The current content is backed up first. Review and regenerate restored content as prompted.
 
-Element editing covers supported 2D nodes, not every arbitrary third-party component or internal Canvas/WebGL object. The whole-video editor currently uses a sequential video track, timed overlays, and multiple audio tracks. It does not include every professional editor feature, such as cross-dissolves, color grading, waveform editing, or freely overlapping video tracks. Imported video is not automatically transcribed into subtitles.
+The creation interface and menus currently hide Element editing and Manual/Timeline editing (元素编辑、手动编辑／时间线剪辑). The scene strip at the bottom selects scenes and previews; it is not a drag-to-trim editor. Element dragging, clip trimming/splitting, overlays, multitrack mixing, and the edit-preview workflow are not documented as currently available UI operations.
 
 ## Downloads, offline use, and recovery
 
@@ -122,13 +123,13 @@ After cancellation or interruption, reopen the local project and resume from the
 | Voiceover fails or is silent | Check the method, voice, service URL/region, and credentials; try Windows system speech to verify the local pipeline |
 | GPU is not selected | Hardware may be unavailable, unsupported for the job, or slower than CPU; automatic CPU use is expected in these cases |
 | First export is slow | Initial compilation, speech, asset preparation, and GPU probes add overhead; later work can reuse valid caches |
-| Edit preview lacks overlays/mixing | Save and generate an edit preview instead of viewing only the source clip |
+| Cannot find element or manual editing | These entry points are hidden; revise content in the conversation, or use the narration list's pencil buttons |
 | Downloaded a Source code ZIP | Return to release Assets and download the installer ending in Setup.exe |
 
 ## Backups, licenses, and feedback
 
 Projects and outputs live on your computer. Back up the project directory and related assets. An exported plan or subtitle file does not replace a full project backup. Avoid deleting internal scene/cache files to resolve an unidentified error.
 
-Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for bundled notices. Use the application release notes and in-app links for the matching FFmpeg/ffprobe source and build records; resources can also be found in [Releases](https://github.com/makesynt/seqvio-studio/releases).
+Open **Settings → About & diagnostics → Third-party licenses and source** (第三方许可与源码) for local FFmpeg/ffprobe notices and source links. Refer to bundled copyright and license notices for other components. Use the application release notes and in-app links for the matching FFmpeg/ffprobe source and build records; resources can also be found in [Releases](https://github.com/makesynt/seqvio-studio/releases).
 
 For [Issues](https://github.com/makesynt/seqvio-studio/issues), include the app version, Windows version, engine/model, failing stage, exact error, and minimal reproduction steps. Remove API keys, tokens, and private material from screenshots, logs, or project excerpts before posting.

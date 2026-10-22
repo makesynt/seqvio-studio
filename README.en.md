@@ -1,6 +1,6 @@
 <h1 align="center">Seqvio Studio</h1>
 
-<p align="center"><strong>Make long-form video creation simpler.</strong><br>Turn a topic and references into videos you can review and revise.</p>
+<p align="center"><strong>Make long-form video creation simpler.</strong></p>
 
 <p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>Download</strong></a> · <a href="docs/USAGE.en.md">User guide</a> · <a href="docs/STYLE-PACKS.md">Style packs & customization</a> · <a href="README.md">简体中文</a></p>
 
@@ -43,7 +43,7 @@ Samples illustrate a visual direction. Actual work depends on your topic, refere
 
 1. **Connect and choose a style.** Install/authenticate one supported CLI. Select an available model under engine settings (引擎与连接). Supply the topic, audience, target duration, and references, then choose a visual style.
 2. **Review and approve.** Check the outline, scenes and narration, and static keyframes. Choose landscape/portrait and 720p/1080p, then approve the current version.
-3. **Produce and export.** Choose Windows system speech, a configured voice service, or no voiceover. Produce and preview the result, then export MP4 and separate SRT/VTT subtitles.
+3. **Produce and export.** Choose Windows system speech, a configured voice service, or no voiceover. Produce and preview the result, then export MP4. If the result has subtitles, save them via More project actions → Export subtitles SRT (更多项目操作 → 导出字幕 SRT).
 
 Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
 
@@ -108,7 +108,7 @@ Projects and outputs are stored locally. References, prompts, style reference im
 <details>
 <summary>What are the subtitle, GPU, and offline limits?</summary>
 
-Subtitle/phrase timing is estimated, not word-level forced alignment. SRT/VTT are separate files, not automatically burned-in captions. GPU use depends on hardware, drivers, the task, and measured speed; initial probes add overhead, and CPU may be the better choice. Cache full samples and optional fonts before using them offline.
+Subtitle/phrase timing is estimated, not word-level forced alignment. SRT subtitles are exported separately, not automatically burned into the picture. GPU use depends on hardware, drivers, the task, and measured speed; initial probes add overhead, and CPU may be the better choice. Cache full samples and optional fonts before using them offline.
 
 </details>
 
