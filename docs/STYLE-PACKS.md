@@ -9,7 +9,7 @@
 这些包是 Seqvio Studio 0.1.0 随包 41 套风格的可导入个人副本。安装版已内置原风格，通常无需重复导入；本发布用于备份、分享和外部修改后重新导入。
 
 1. 下载下表中的单个 ZIP；或下载合集并先解压。
-2. 打开应用“自定义 → 导入风格包”（也可使用风格库的导入入口），选择单个风格 ZIP。合集不能直接作为一个风格导入；当前没有批量导入功能。
+2. 打开“风格库 → 我的风格 → 导入风格包”，选择一个风格 ZIP；使用合集时，先解压并取出所需的单包 ZIP。
 3. 导入后在“我的风格”中预览和使用。风格视频样片仍由 [style-samples-v1](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) 单独提供。
 4. 包使用应用正式导出规则：保留风格内容，ID 改为 `custom-...`、版本为 `1`，避免覆盖内置 `builtin-...`。下表的“来源版本”是原内置包版本，不是导入副本版本。
 5. 相同包重复导入会复用已有版本。同 ID/版本但内容不同会拒绝导入；若已修改同名个人包，请先备份，在包外增加版本或更换 ID，保留自己的修改。
@@ -21,7 +21,7 @@
 These are importable personal copies of the 41 styles bundled with Seqvio Studio 0.1.0. Existing installations already have the originals; importing again is optional. This release supports backup, sharing, and editing packages outside the app before reimporting.
 
 1. Download an individual ZIP below, or download and extract the collection.
-2. Open Custom → Import style package (自定义 → 导入风格包), or the library import action, and select one style ZIP. The collection cannot be imported as a single style; bulk import is not available.
+2. Open Style library → My styles → Import style package (风格库 → 我的风格 → 导入风格包) and select one style ZIP. For a collection, extract it first and choose an individual pack ZIP.
 3. Find the copy under My styles (我的风格). Full sample videos remain separate in [style-samples-v1](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1).
 4. Packs follow the app export action: preserve style content, use `custom-...` IDs and version `1`, and leave reserved built-ins untouched. Source version below refers to the original built-in package.
 5. Identical imports reuse an existing version. Different content with the same ID/version is rejected. Back up modified personal styles, then increase the version or choose another ID outside the app rather than replacing your work.
@@ -34,7 +34,7 @@ Each pack preserves SKILL.md, configuration, rules, abstract examples, declared 
 2. 修改 `SKILL.md` 中的制作方法、`rules.json` 的规则和可选的 `examples.json`；在 `style.json` 中调整现有能力支持的配色、排版、布局与动效。需要图片或字体时，将文件放入 `assets/` 并声明。
 3. 设置自己的 `id` 和 `name`，同步更新 `profile.id` 与 `profile.label`，以及 SKILL frontmatter 的 name/description。不要使用保留的 `builtin-` 前缀。
 4. 保留已有 ID 时，每次修改包内容都增加整数 `version`。相同 ID/版本只有内容完全一致才会复用，否则应用拒绝导入。
-5. 将单个风格目录的内容压缩为 ZIP（根目录直接含 style.json，或只有一个外层包目录），通过“自定义 → 导入风格包”导入并用短项目验证。保留资源的原有许可与版权说明。
+5. 将单个风格目录的内容压缩为 ZIP（根目录直接含 style.json，或只有一个外层包目录），通过“风格库 → 我的风格 → 导入风格包”导入并用短项目验证。保留资源的原有许可与版权说明。
 
 ## 参考格式制作自己的风格包
 
@@ -65,7 +65,7 @@ my-style/
 
 ## Customize an existing pack
 
-Extract one style ZIP. Edit the authoring guidance in SKILL.md, rules, optional abstract examples, and supported palette/typography/layout/motion settings in style.json. Add declared assets and retain their notices. Choose your own ID/name, update profile.id/profile.label and SKILL frontmatter, or increase the integer version if retaining an existing ID. Never use the reserved builtin- prefix. ZIP only that package and import it through Custom → Import style package, then check it with a short project. Identical reimports reuse a version; conflicting content with the same ID/version is rejected.
+Extract one style ZIP. Edit the authoring guidance in SKILL.md, rules, optional abstract examples, and supported palette/typography/layout/motion settings in style.json. Add declared assets and retain their notices. Choose your own ID/name, update profile.id/profile.label and SKILL frontmatter, or increase the integer version if retaining an existing ID. Never use the reserved builtin- prefix. ZIP only that package and import it through Style library → My styles → Import style package, then check it with a short project. Identical reimports reuse a version; conflicting content with the same ID/version is rejected.
 
 ## Create your own package from the format
 

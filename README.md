@@ -81,7 +81,7 @@ Get-FileHash -Algorithm SHA256 .\Seqvio-Studio-*-Setup.exe
 
 1. 从[风格包发布页](https://github.com/makesynt/seqvio-studio/releases/tag/style-packs-v1)下载单包或合集；合集须先解压，取出所需的单包 ZIP。
 2. 解压单包，修改规则、配色、排版、动效或资源，也可参考格式制作自己的风格包。
-3. 按[风格包指南](docs/STYLE-PACKS.md)设置 ID 与版本，重新打包，通过应用的“自定义 → 导入风格包”导入。
+3. 按[风格包指南](docs/STYLE-PACKS.md)设置 ID 与版本，重新打包，通过应用的“风格库 → 我的风格 → 导入风格包”导入。
 
 ## 数据与隐私
 
@@ -107,7 +107,7 @@ Seqvio Studio 的场景、时序、质检与渲染能力基于同样由本项目
 | [Electron](https://github.com/electron/electron) / [Chromium](https://www.chromium.org/) | 桌面运行时及默认浏览器渲染基础。 |
 | [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | 代码场景组件与本地三维画面。 |
 | [Rough.js](https://github.com/rough-stuff/rough) | 手绘线条与白板绘图。 |
-| [Excalidraw](https://github.com/excalidraw/excalidraw) | 白板视觉与 Virgil 字体来源；并非嵌入完整 Excalidraw 编辑器。 |
+| [Excalidraw](https://github.com/excalidraw/excalidraw) | 白板视觉与 Virgil 字体来源。 |
 | [FFmpeg](https://ffmpeg.org/) | 媒体探测、音视频编解码、混音和合成。 |
 | [Puppeteer](https://github.com/puppeteer/puppeteer) / [esbuild](https://github.com/evanw/esbuild) | 浏览器自动化及场景编译打包。 |
 | [Shiki](https://github.com/shikijs/shiki) / [Dagre](https://github.com/dagrejs/dagre) | 代码高亮与图表布局。 |

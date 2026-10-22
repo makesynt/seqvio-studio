@@ -38,7 +38,7 @@ For a nonstandard CLI location, set `OPENCODE_CMD`, `CODEX_CMD`, or `ANTIGRAVITY
 
 ### Style library
 
-The [style-pack download and customization guide](STYLE-PACKS.md) provides existing packages to modify and a format reference for creating your own. Use your own ID/name, or increase the version when retaining an existing ID, then use Custom → Import style package (自定义 → 导入风格包). Extract collections before importing individual packs.
+The [style-pack download and customization guide](STYLE-PACKS.md) provides existing packages to modify and a format reference for creating your own. Use your own ID/name, or increase the version when retaining an existing ID, then use Style library → My styles → Import style package (风格库 → 我的风格 → 导入风格包). Extract collections before importing individual packs.
 
 Browse the 41 built-in styles. Covers and silent short loops are bundled. Opening a full sample downloads only that video, verifies it, and caches it. Silent hover loops are intentional, not a voiceover failure.
 
@@ -84,23 +84,23 @@ Review each scene's narration, visual intent, and steps. Correct facts and wordi
 
 Generate static keyframes and inspect text, composition, assets, whiteboard content, and visual steps. Choose **16:9 landscape / 9:16 portrait** and **720p / 1080p**. If the format changes, wait for updated previews and review them again.
 
-Read quality findings and approve the current project state. Reviewing one scene does not necessarily approve the full video. If production requests confirmation, return to the relevant review action. Changes to narration, visuals, style, or output settings may invalidate affected approvals and require another review.
+Inspect each scene and its quality findings, then approve the current version of the full video. Changes to narration, visuals, style, or output settings may invalidate affected approvals and require another review.
 
 ### 5. Produce, preview, and export
 
 Continue with voiceover and scene rendering. Wait for assembly, play the result, and check audio, pacing, subtitles, and the ending before exporting.
 
-The current default output is **H.264/AAC MP4 at 24 fps**. Use Export video (导出视频) at the top right to save it. If the result has subtitles, use More project actions → Export subtitles SRT (更多项目操作 → 导出字幕 SRT) to save a separate **SRT** file. Preview playback may use a VTT subtitle track, but the current interface has no separate VTT export action. Separate subtitles are not automatically burned into the picture. Bundled x265 capability does not add an H.265 export control to the current interface.
+Use Export video (导出视频) at the top right to save the **H.264/AAC MP4 at 24 fps**. If the result has subtitles, use More project actions → Export subtitles SRT (更多项目操作 → 导出字幕 SRT) to save a separate **SRT** file.
 
 ## Revise content and restore versions
 
 1. **Request changes in the conversation**: identify the scene, visuals, or narration to change in the workspace conversation so the agent can revise the relevant content.
-2. **Edit narration directly**: the narration list still provides a pencil button for each scene. Select a scene, click the button, revise the text, and save. You can also use the application menu Edit → View / Edit script (编辑 → 查看 / 编辑脚本).
+2. **Edit narration directly**: select a scene, click its pencil button in the narration list, revise the text, and save. You can also use the application menu Edit → View / Edit script (编辑 → 查看 / 编辑脚本).
 3. **Review and produce the update**: follow Review changes (审阅修改) or the relevant review action, inspect updated content and keyframes, then confirm and continue production. Valid unchanged outputs are reused. Narration changes may also affect the voiceover, scene duration, and subtitles.
 4. **Check the updated result**: if the preview is marked as the previous version (当前预览为上一版), you are still watching the old result. Finish producing the update, check its visuals, audio, and pacing, then export again.
 5. **Restore an existing version**: open More project actions (更多项目操作, the top-right ellipsis) → Version history (版本历史). The dialog is titled 方案历史; select an existing record and confirm restoration. The current content is backed up first. Review and regenerate restored content as prompted.
 
-The creation interface and menus currently hide Element editing and Manual/Timeline editing (元素编辑、手动编辑／时间线剪辑). The scene strip at the bottom selects scenes and previews; it is not a drag-to-trim editor. Element dragging, clip trimming/splitting, overlays, multitrack mixing, and the edit-preview workflow are not documented as currently available UI operations.
+Select a scene thumbnail in the bottom strip to switch scenes and browse its visual preview.
 
 ## Downloads, offline use, and recovery
 
@@ -123,7 +123,6 @@ After cancellation or interruption, reopen the local project and resume from the
 | Voiceover fails or is silent | Check the method, voice, service URL/region, and credentials; try Windows system speech to verify the local pipeline |
 | GPU is not selected | Hardware may be unavailable, unsupported for the job, or slower than CPU; automatic CPU use is expected in these cases |
 | First export is slow | Initial compilation, speech, asset preparation, and GPU probes add overhead; later work can reuse valid caches |
-| Cannot find element or manual editing | These entry points are hidden; revise content in the conversation, or use the narration list's pencil buttons |
 | Downloaded a Source code ZIP | Return to release Assets and download the installer ending in Setup.exe |
 
 ## Backups, licenses, and feedback

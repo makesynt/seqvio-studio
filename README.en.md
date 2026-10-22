@@ -81,7 +81,7 @@ Built-in styles are ready to use. To customize them:
 
 1. Download an individual pack or collection from the [style-pack release](https://github.com/makesynt/seqvio-studio/releases/tag/style-packs-v1). Extract collections first to get the individual pack ZIPs.
 2. Extract a pack and edit its rules, palette, typography, motion, or assets. You can also follow the format to build your own pack.
-3. Set the ID and version as described in the [style-pack guide](docs/STYLE-PACKS.md), repackage, and import through Custom → Import style package (自定义 → 导入风格包).
+3. Set the ID and version as described in the [style-pack guide](docs/STYLE-PACKS.md), repackage, and import through Style library → My styles → Import style package (风格库 → 我的风格 → 导入风格包).
 
 ## Data and privacy
 
@@ -107,7 +107,7 @@ Parts of the art-style and animation implementation draw inspiration from the de
 | [Electron](https://github.com/electron/electron) / [Chromium](https://www.chromium.org/) | Desktop runtime and browser rendering foundation. |
 | [React](https://github.com/react/react) / [Three.js](https://github.com/mrdoob/three.js) | Authored scene components and local 3D visuals. |
 | [Rough.js](https://github.com/rough-stuff/rough) | Sketch-style strokes and whiteboard drawing. |
-| [Excalidraw](https://github.com/excalidraw/excalidraw) | Whiteboard visual references and the Virgil font; the full Excalidraw editor is not embedded. |
+| [Excalidraw](https://github.com/excalidraw/excalidraw) | Whiteboard visual references and the Virgil font. |
 | [FFmpeg](https://ffmpeg.org/) | Media probing, audio/video codecs, mixing, and assembly. |
 | [Puppeteer](https://github.com/puppeteer/puppeteer) / [esbuild](https://github.com/evanw/esbuild) | Browser automation and scene compilation/bundling. |
 | [Shiki](https://github.com/shikijs/shiki) / [Dagre](https://github.com/dagrejs/dagre) | Syntax highlighting and graph layout. |
