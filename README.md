@@ -6,7 +6,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/hero-dark.png">
-  <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — a designed collage of actual style-sample frames" width="1200">
+  <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — six selected styles: stickman, Bauhaus, flat explainers, blackboard, retro pixels and animated cinema" width="1200">
 </picture>
 
 
@@ -23,6 +23,8 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
   <img src="docs/images/readme/workflow-zh-light.png" alt="创作流程：资料与风格 → Agent 创作 → 由你审阅确认 → 本地制作导出；修改后审阅受影响画面并复用有效产物。" width="1440">
 </picture>
 
+建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
+
 <details>
 <summary>查看流程与能力文字说明</summary>
 
@@ -34,40 +36,33 @@ Seqvio Studio 是一款 AI 辅助的本地视频创作工作台。连接你自�
 
 </details>
 
-## 选择你的视觉语言
+## 精选风格
 
-| 解释复杂概念 | 换一种视觉表达 |
-| :---: | :---: |
-| [![ 技术图解 ](docs/images/styles/tech.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4)<br>**技术图解** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4) | [![ 手绘黑板 ](docs/images/styles/blackboard.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4)<br>**手绘黑板** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4) |
-| [![ 孟菲斯 ](docs/images/styles/memphis.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4)<br>**孟菲斯** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4) | [![ 莫奈光色 ](docs/images/styles/monet.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4)<br>**莫奈光色** · [观看样片](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4) |
+六种风格的完整样片合集，按上方顺序串联；保留原样片音轨。
 
+https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 
-样片展示风格方向，实际作品由主题、资料、所选模型与审阅修改共同决定。[浏览全部样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [下载风格包](docs/STYLE-PACKS.md)
+<table>
+<tr>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/motion-stickman-d1d73606e2309436.mp4"><img src="docs/images/styles/motion-stickman.webp" alt="火柴人动画" width="432"></a><br><strong>火柴人动画</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/motion-stickman-d1d73606e2309436.mp4">完整样片</a></td>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/bauhaus-041e1caad83c2189.mp4"><img src="docs/images/styles/bauhaus.webp" alt="包豪斯几何" width="432"></a><br><strong>包豪斯几何</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/bauhaus-041e1caad83c2189.mp4">完整样片</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/kurzgesagt-flat-09edc2b324906276.mp4"><img src="docs/images/styles/kurzgesagt-flat.webp" alt="扁平科普" width="432"></a><br><strong>扁平科普</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/kurzgesagt-flat-09edc2b324906276.mp4">完整样片</a></td>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4"><img src="docs/images/styles/blackboard.webp" alt="手绘黑板" width="432"></a><br><strong>手绘黑板</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4">完整样片</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/pixel-1f26cb412eb9dc1f.mp4"><img src="docs/images/styles/pixel.webp" alt="复古像素" width="432"></a><br><strong>复古像素</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/pixel-1f26cb412eb9dc1f.mp4">完整样片</a></td>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/cinematic-light-38aa59501dc45dd9.mp4"><img src="docs/images/styles/cinematic-light.webp" alt="动画电影" width="432"></a><br><strong>动画电影</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/cinematic-light-38aa59501dc45dd9.mp4">完整样片</a></td>
+</tr>
+</table>
+
+样片展示风格方向，实际作品由主题、资料、所选模型与审阅修改共同决定。 [浏览全部样片](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [下载风格包](docs/STYLE-PACKS.md) · [样片与音乐署名](docs/SHOWCASE-CREDITS.md)
 
 <details>
 <summary>查看应用实际界面：风格库</summary>
 
 ![Seqvio Studio 风格库实际界面](docs/images/style-library.png)
-
-</details>
-
-## 三步开始第一次创作
-
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-zh-dark-mobile.png">
-  <source media="(max-width: 600px)" srcset="docs/images/readme/quickstart-zh-light-mobile.png">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-zh-dark.png">
-  <img src="docs/images/readme/quickstart-zh-light.png" alt="首次创作三步：连接 CLI、模型并选择风格；审阅草案、分镜与关键帧；确认后制作、预览并导出。" width="1440">
-</picture>
-
-建议先做一个 30–60 秒的小项目。连接检测只验证 CLI 能否启动，模型访问和额度仍需可用。[查看完整操作步骤](docs/USAGE.zh-CN.md)
-
-<details>
-<summary>查看三步操作文字说明</summary>
-
-1. **连接与选风格** — 安装并登录一个受支持的 CLI，在“设置 → 引擎与连接”选择可用模型；输入主题、受众、目标时长和资料，选择视觉风格。
-2. **审阅与确认** — 依次检查制作草案、分镜与旁白、静态关键帧。选择横屏或竖屏、720p 或 1080p，完成当前版本确认。
-3. **制作与导出** — 选择 Windows 系统语音、已配置的语音服务或无配音，制作并预览成片，导出 MP4；成片有字幕时，可通过“更多项目操作 → 导出字幕 SRT”另存字幕。
 
 </details>
 

@@ -6,7 +6,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/hero-dark.png">
-  <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — a designed collage of actual style-sample frames" width="1200">
+  <img src="docs/images/readme/hero-light.png" alt="Seqvio Studio — six selected styles: stickman, Bauhaus, flat explainers, blackboard, retro pixels and animated cinema" width="1200">
 </picture>
 
 
@@ -23,6 +23,8 @@ Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode
   <img src="docs/images/readme/workflow-en-light.png" alt="Creative workflow: material and style → agent creation → your review and approval → local production and export; review changes and reuse valid outputs." width="1440">
 </picture>
 
+Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
+
 <details>
 <summary>Text description of the workflow and capabilities</summary>
 
@@ -34,40 +36,33 @@ Seqvio Studio is an AI-assisted local video workspace. Connect your own OpenCode
 
 </details>
 
-## Choose your visual language
+## Featured styles
 
-| Explain complex ideas | Find your visual language |
-| :---: | :---: |
-| [![ Technical diagrams ](docs/images/styles/tech.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4)<br>**Technical diagrams** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/tech-7390b01c76cdb29c.mp4) | [![ Hand-drawn blackboard ](docs/images/styles/blackboard.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4)<br>**Hand-drawn blackboard** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4) |
-| [![ Memphis motion ](docs/images/styles/memphis.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4)<br>**Memphis motion** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/memphis-ebee7c23dd8c01ad.mp4) | [![ Monet-inspired color ](docs/images/styles/monet.webp)](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4)<br>**Monet-inspired color** · [Watch sample](https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/monet-ad2802e92ca6c101.mp4) |
+A compilation of six complete samples in the order shown above, with their original audio.
 
+https://github.com/user-attachments/assets/3c18f0a6-96c7-45c5-8655-aabd8625d4b1
 
-Samples illustrate a visual direction. Actual work depends on your topic, references, selected model, and review. [Browse all samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [Download style packs](docs/STYLE-PACKS.md)
+<table>
+<tr>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/motion-stickman-d1d73606e2309436.mp4"><img src="docs/images/styles/motion-stickman.webp" alt="Stickman animation" width="432"></a><br><strong>Stickman animation</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/motion-stickman-d1d73606e2309436.mp4">Full sample</a></td>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/bauhaus-041e1caad83c2189.mp4"><img src="docs/images/styles/bauhaus.webp" alt="Bauhaus geometry" width="432"></a><br><strong>Bauhaus geometry</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/bauhaus-041e1caad83c2189.mp4">Full sample</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/kurzgesagt-flat-09edc2b324906276.mp4"><img src="docs/images/styles/kurzgesagt-flat.webp" alt="Flat explainers" width="432"></a><br><strong>Flat explainers</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/kurzgesagt-flat-09edc2b324906276.mp4">Full sample</a></td>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4"><img src="docs/images/styles/blackboard.webp" alt="Hand-drawn blackboard" width="432"></a><br><strong>Hand-drawn blackboard</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4">Full sample</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/pixel-1f26cb412eb9dc1f.mp4"><img src="docs/images/styles/pixel.webp" alt="Retro pixel art" width="432"></a><br><strong>Retro pixel art</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/pixel-1f26cb412eb9dc1f.mp4">Full sample</a></td>
+<td align="center"><a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/cinematic-light-38aa59501dc45dd9.mp4"><img src="docs/images/styles/cinematic-light.webp" alt="Animated cinema" width="432"></a><br><strong>Animated cinema</strong> · <a href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/cinematic-light-38aa59501dc45dd9.mp4">Full sample</a></td>
+</tr>
+</table>
+
+Samples illustrate a visual direction. Results depend on your topic, references, selected model and review. [Browse all samples](https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1) · [Download style packs](docs/STYLE-PACKS.md) · [Sample and music credits](docs/SHOWCASE-CREDITS.md)
 
 <details>
 <summary>See the actual app: style library</summary>
 
 ![The actual Seqvio Studio style library, shown in Chinese](docs/images/style-library.png)
-
-</details>
-
-## Start in three steps
-
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-en-dark-mobile.png">
-  <source media="(max-width: 600px)" srcset="docs/images/readme/quickstart-en-light-mobile.png">
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/quickstart-en-dark.png">
-  <img src="docs/images/readme/quickstart-en-light.png" alt="First project: connect one agent CLI and model, choose a style; review the outline, scenes and keyframes; approve, produce, preview and export." width="1440">
-</picture>
-
-Try a 30–60 second project first. A connection check only confirms that the CLI starts; model access and quota must also be available. [Read the full walkthrough](docs/USAGE.en.md)
-
-<details>
-<summary>Text walkthrough of the three steps</summary>
-
-1. **Connect and choose a style.** Install/authenticate one supported CLI. Select an available model under engine settings (引擎与连接). Supply the topic, audience, target duration, and references, then choose a visual style.
-2. **Review and approve.** Check the outline, scenes and narration, and static keyframes. Choose landscape/portrait and 720p/1080p, then approve the current version.
-3. **Produce and export.** Choose Windows system speech, a configured voice service, or no voiceover. Produce and preview the result, then export MP4. If the result has subtitles, save them via More project actions → Export subtitles SRT (更多项目操作 → 导出字幕 SRT).
 
 </details>
 
