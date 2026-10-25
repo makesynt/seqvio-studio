@@ -2,7 +2,7 @@
 
 <p align="center"><strong>长视频创作，化繁为简。</strong></p>
 
-<p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>下载安装</strong></a> · <a href="docs/USAGE.zh-CN.md">使用指南</a> · <a href="docs/STYLE-PACKS.md">风格包与自定义</a> · <a href="README.en.md">English</a></p>
+<p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>下载安装</strong></a> · <a href="#产品介绍">观看演示</a> · <a href="docs/USAGE.zh-CN.md">使用指南</a> · <a href="docs/STYLE-PACKS.md">风格包与自定义</a> · <a href="README.en.md">English</a></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/hero-dark.png">
@@ -10,6 +10,14 @@
 </picture>
 
 Seqvio Studio 是一款 AI 辅助的本地视频创作工作台，内置 41 套视觉风格。连接 OpenCode、Codex 或 Antigravity 编写画面与动画，审阅关键帧后完成配音、质检和视频导出。
+
+## 产品介绍
+
+1 分 14 秒了解本地工作台、40+ 风格，以及从分镜审阅到预览、修改与导出的创作流程。
+
+[![Seqvio Studio 产品介绍 — 点击前往 YouTube 观看](https://i.ytimg.com/vi/PKEJ8uIZQto/maxresdefault.jpg)](https://youtu.be/PKEJ8uIZQto)
+
+[▶ 在 YouTube 观看产品介绍 · 1:14](https://youtu.be/PKEJ8uIZQto)
 
 ## 从内容到成片，保留创作的控制权
 

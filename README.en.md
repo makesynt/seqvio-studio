@@ -2,7 +2,7 @@
 
 <p align="center"><strong>Make long-form video creation simpler.</strong></p>
 
-<p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>Download</strong></a> · <a href="docs/USAGE.en.md">User guide</a> · <a href="docs/STYLE-PACKS.md">Style packs & customization</a> · <a href="README.md">简体中文</a></p>
+<p align="center"><a href="https://github.com/makesynt/seqvio-studio/releases"><strong>Download</strong></a> · <a href="#product-video">Watch demo</a> · <a href="docs/USAGE.en.md">User guide</a> · <a href="docs/STYLE-PACKS.md">Style packs & customization</a> · <a href="README.md">简体中文</a></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme/hero-dark.png">
@@ -10,6 +10,14 @@
 </picture>
 
 Seqvio Studio is an AI-assisted desktop workspace for video creation, with 41 built-in visual styles. Connect OpenCode, Codex, or Antigravity to create scenes and animation, review keyframes, then generate narration and render locally.
+
+## Product video
+
+A 74-second overview of the local workspace, 40+ visual styles, and the workflow from storyboard review to preview, revisions, and export.
+
+[![Seqvio Studio product overview — watch on YouTube](https://i.ytimg.com/vi/PKEJ8uIZQto/maxresdefault.jpg)](https://youtu.be/PKEJ8uIZQto)
+
+[▶ Watch the product video on YouTube · 1:14](https://youtu.be/PKEJ8uIZQto)
 
 ## Keep control from first idea to final video
 
